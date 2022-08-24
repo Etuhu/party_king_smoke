@@ -99,13 +99,18 @@ var colorSmokes = document.querySelectorAll(".smoke-wrapper-color > img");
 //     return result.includes(item) ? result : [...result, item];
 // }, []);
 
-
-colorSmokes.forEach((colorSmoke) => {
-    console.log(swiperChoose.slides[swiperChoose.activeIndex].dataset.color);
-    // if (colorSmoke.dataset.color == swiperChoose.slides[swiperChoose.activeIndex].dataset.color) {
-    //     colorSmoke.lastElementChild.style.opacity = 1;
-    // }
+swiperChoose.on('slideChange', function () {
+    var colorSmokeItem = document.querySelector(`.smoke-wrapper-color > img[data-color=${this.slides[this.activeIndex].dataset.color}]`);
+    colorSmokeItem.style.opacity = 1;
+    // colorSmokes.forEach((colorSmoke) => {
+    //     console.log(this.slides[this.activeIndex].dataset.color);
+        // if (colorSmoke.dataset.color == this.slides[this.activeIndex].dataset.color) {
+        //     colorSmoke.lastElementChild.style.opacity = 1;
+        // }
+    // });
 });
+
+
 
 
 
