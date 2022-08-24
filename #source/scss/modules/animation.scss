@@ -1,0 +1,109 @@
+@keyframes slideToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideToRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideToLeftZoom {
+    0% {
+        transform: scale(1) translateX(100%);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeTextToUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeTextToUpCenter {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes doubleFlashText {
+    0% {
+        text-shadow: 0 0 3px rgba(255, 255, 255, 0);
+        opacity: 1;
+        transform: scale(1);
+    }
+    25% {
+        text-shadow: 0 0 3px $red;
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 0 0 3px rgba(255, 255, 255, 0);
+        opacity: 1;
+        transform: scale(1);
+    }
+    75% {
+        text-shadow: 0 0 3px $red;
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

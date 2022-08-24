@@ -1,0 +1,126 @@
+.king-box-kit {
+    .color-block {
+        position: relative;
+        width: 793px;
+        height: 793px;
+        background: linear-gradient(180deg, #E41117 0%, rgba(228, 17, 23, 0) 65.26%);
+        margin-top: 205px;
+        opacity: 0;
+        will-change: opacity;
+        .color-block-title {
+            position: absolute;
+            top: 170px;
+            right: 120px;
+            color: white;
+            font-weight: 100;
+            font-size: 2.66rem;
+        }
+        .scroll-title {
+            position: absolute;
+            width: fit-content;
+            top: 30px;
+            left: 80px;
+            color: rgba(102, 6, 6, 0.1);
+            font-weight: 100;
+            font-size: 13rem;
+            line-height: 1;
+            white-space: nowrap;
+            transform: translateX(100%);
+            will-change: transform;
+        }
+    }
+    .king-box-wrapper {
+        margin-top: -400px;
+        .king-box-pic {
+            .box-wrapper {
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                filter: drop-shadow(100px 70px 120px rgba(0, 0, 0, 0.4));
+                transform: translateX(-50%);
+                opacity: 0;
+                will-change: opacity, transform;
+                .box-cap-wrapper {
+                    transform: translateX(100%);
+                    will-change: transform;
+                }
+            }
+        }
+        .king-box-text {
+            font-weight: 100;
+            line-height: 1.1;
+            text-align: right;
+           > h3 {
+                font-weight: 100;
+                font-size: 2.66rem;
+                opacity: 0;
+                transform: translateY(100%);
+                will-change: transform;
+            }
+            > p {
+                opacity: 0;
+                transform: translateY(100%);
+                will-change: opacity, transform;
+            }
+            .price-block {
+                font-family: 'Humnst777 Lt BT', sans-serif;
+                font-weight: 400;
+                letter-spacing: 1px;
+                font-size: 0.8rem;
+                color: $darkgrey;
+                .price-value {
+                    font-size: 1rem;
+                    line-height: 2;
+                }
+            }
+            .price-link {
+                display: inline-block;
+                color: $red;
+                font-weight: 400;
+                font-size: 1.3rem;
+                opacity: 0;
+                transform: scale(0.3);
+                will-change: opacity, transform;
+                // transition: text-shadow 0.3s ease;
+                &:hover {
+                    text-shadow: 0 0 3px $red;
+                    // transition: text-shadow 0.3s ease;
+                }
+            }
+        }
+    }
+}
+
+.section.king-box-kit.fp-completely.active {
+    .color-block {
+        animation: fade 0.8s forwards ease;
+        .scroll-title {
+            animation: slideToLeft 3s forwards cubic-bezier(0,0,.05,1) 0.5s;
+        }
+    }
+    .king-box-wrapper {
+        margin-top: -400px;
+        .king-box-pic {
+            .box-wrapper {
+                animation: fadeToRight 0.5s forwards ease 0.5s;
+                .box-cap-wrapper {
+                    animation: slideToLeftZoom 1s forwards ease-in-out 1s;
+                }
+            }
+        }
+    }
+    .king-box-text {
+        > h3 {
+            animation: fadeTextToUp 0.3s forwards ease 1.7s;
+        }
+        > p {
+            animation: fadeTextToUp 0.3s forwards ease 2s;
+        }
+        > p.price-block {
+            animation: fadeTextToUp 0.3s forwards ease 2.3s;
+        }
+        > .price-link {
+            animation: doubleFlashText 0.8s forwards ease 2.8s;
+        }
+    }
+}
