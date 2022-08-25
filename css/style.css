@@ -947,7 +947,8 @@ a {
   animation: fadeTextToUp 1s forwards ease 2s;
 }
 
-.choose-color > .container {
+.choose-color > .container,
+.choose-color > .choose-color-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -961,11 +962,19 @@ a {
   bottom: 0;
   right: 0;
   z-index: -1;
+  overflow: hidden;
+}
+.choose-color .smoke-wrapper .smoke-wrapper-color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 .choose-color .smoke-wrapper .smoke-wrapper-color > img {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -50px;
+  right: -50px;
   opacity: 0;
   transition: 0.3s ease;
 }
@@ -1003,6 +1012,7 @@ a {
   text-align: center;
   position: relative;
   z-index: 10;
+  transition: 0.85s ease;
 }
 .choose-color .choose-swiper .swiper-slide .pic > img {
   max-width: 56%;

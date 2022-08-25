@@ -11,6 +11,17 @@ window.addEventListener("DOMContentLoaded", function () {
 		scalarX: 7,
 		scalarY: 7,
 	});
+
+	let smokeWrapperScene = document.getElementById("parallax-smoke-wrapper");
+	let parallaxSmokeWrapper = new Parallax(smokeWrapperScene, {
+		relativeInput: true,
+		clipRelativeInput: true,
+		recordHistory: true,
+		limitX: 150,
+		limitY: 200,
+		scalarX: 7,
+		scalarY: 7,
+	});
 	// }
 });
 
@@ -31,6 +42,16 @@ const fullPage = new fullpage("#fullpage", {
 	credits: { enabled: false, label: "Made with fullPage.js", position: "right" },
 });
 
+
+let refreshSmokeColor = function (sliderName) {
+	var colorSmokes = document.querySelectorAll(".smoke-wrapper-color > img");
+	colorSmokes.forEach((colorSmoke) => {
+		colorSmoke.style.opacity = 0;
+	});
+	var colorSmokeItem = document.querySelector(`.smoke-wrapper-color > img[data-color=${sliderName.slides[sliderName.activeIndex].dataset.color}]`);
+	colorSmokeItem.style.opacity = 1;
+};
+
 const swiperChoose = new Swiper(".choose-swiper", {
 	slidesPerView: 5,
 	centeredSlides: true,
@@ -38,11 +59,12 @@ const swiperChoose = new Swiper(".choose-swiper", {
 	slidesPerGroup: 1,
 	loop: true,
 	watchOverflow: true,
-	simulateTouch: false,
+	watchSlidesProgress: true,
 	initialSlide: 2,
 	slideToClickedSlide: true,
 	simulateTouch: true,
 	observer: true,
+	// observeSlideChildren: true,
 	pagination: {
 		el: ".choose-swiper-pagination",
 		clickable: true,
@@ -87,27 +109,14 @@ const swiperChoose = new Swiper(".choose-swiper", {
 			slidesPerGroup: 1,
 		},
 	},
-});
-
-
-
-var colorSmokes = document.querySelectorAll(".smoke-wrapper-color > img");
-// slideColors.forEach((slideColor) => {
-//     colors.push(slideColor.dataset.color);
-// });
-// var filterColors = colors.reduce((result, item) => {
-//     return result.includes(item) ? result : [...result, item];
-// }, []);
-
-swiperChoose.on('slideChange', function () {
-    var colorSmokeItem = document.querySelector(`.smoke-wrapper-color > img[data-color=${this.slides[this.activeIndex].dataset.color}]`);
-    colorSmokeItem.style.opacity = 1;
-    // colorSmokes.forEach((colorSmoke) => {
-    //     console.log(this.slides[this.activeIndex].dataset.color);
-        // if (colorSmoke.dataset.color == this.slides[this.activeIndex].dataset.color) {
-        //     colorSmoke.lastElementChild.style.opacity = 1;
-        // }
-    // });
+	on: {
+		init: function () {
+			refreshSmokeColor(this);
+		},
+		slideChange: function () {
+			refreshSmokeColor(this);
+		},
+	  }
 });
 
 

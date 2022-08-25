@@ -1,5 +1,6 @@
 .choose-color {
-    > .container {
+    > .container,
+    >.choose-color-wrapper {
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -8,16 +9,23 @@
         display: flex;
         align-items: flex-end;
         position: absolute;
+        // position: fixed;
         width: 100%;
         height: 100%;
         bottom: 0;
         right: 0;
         z-index: -1;
+        overflow: hidden;
         .smoke-wrapper-color {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
             > img {
                 position: absolute;
-                bottom: 0;
-                left: 0;
+                bottom: -50px;
+                right: -50px;
                 opacity: 0;
                 transition: 0.3s ease;
             }
@@ -46,52 +54,23 @@
             }
         }
     }
-    // .choose-text-swiper {
-    //     padding-top: 2rem;
-    //     padding-bottom: 2rem;
-    //     .swiper-wrapper {
-    //         justify-content: center;
-    //     }
-    //     .swiper-slide {
-    //         font-size: 2.66rem;
-    //         color: $darkgrey;
-    //         font-weight: 100;
-    //         line-height: 1;
-    //         text-align: center;
-    //         width: fit-content !important;
-    //         &:hover {
-    //             cursor: pointer;
-    //         }
-    //     }
-    //     .swiper-slide-active {
-    //         font-weight: 500;
-    //         &.purple-item {
-    //             color: $purple;
-    //         }
-    //         &.blue-item {
-    //             color: $blue;
-    //         }
-    //         &.red-item {
-    //             color: $red;
-    //         }
-    //         &.green-item {
-    //             color: $green;
-    //         }
-    //         &.yellow-item {
-    //             color: $yellow;
-    //         }
-    //     }
-    // }
     .choose-swiper {
         width: 83%;
         max-width: 83%;
         margin-top: auto;
         flex-grow: 1;
         z-index: 5;
+
+        // position: unset;
+        // .swiper-wrapper {
+        //     position: unset;
+        // }
         .swiper-slide {
             text-align: center;
             position: relative;
             z-index: 10;
+            // opacity: 0;
+            transition: 0.85s ease;
             .pic {
                 > img {
                     max-width: 56%;
@@ -103,6 +82,10 @@
                 }
             }
         }
+        // .swiper-slide.swiper-slide-visible {
+        //     opacity: 1;
+        //     transition: 0.85s ease;
+        // }
         .swiper-slide.swiper-slide-prev,
         .swiper-slide.swiper-slide-next {
             .pic {
