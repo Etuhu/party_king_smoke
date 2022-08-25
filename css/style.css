@@ -1068,4 +1068,140 @@ a {
 .choose-color .choose-swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active.yellow {
   color: #EEB40D;
 }
+
+.color-variants {
+  background-color: black;
+}
+.color-variants .color-variants-item {
+  position: relative;
+}
+.color-variants .color-variants-item .color-block {
+  width: 2359px;
+  height: 1217px;
+  border-radius: 788px;
+}
+.color-variants .color-variants-item .text-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 250px;
+  color: white;
+}
+.color-variants .color-variants-item .text-container .content {
+  font-weight: 100;
+  text-align: right;
+}
+.color-variants .color-variants-item .text-container .content .title {
+  font-weight: 100;
+  font-size: 2.66rem;
+}
+.color-variants .color-variants-item .text-container .content .subtitle {
+  font-size: 1rem;
+  margin-bottom: 70px;
+}
+.color-variants .color-variants-item .text-container .content .features {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 30px;
+}
+.color-variants .color-variants-item .text-container .content .features li {
+  font-size: 2.66rem;
+  line-height: 1.2;
+}
+.color-variants .color-variants-item .text-container .content .link {
+  color: #1E1E1C;
+  font-family: "Humnst777 Lt BT", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.color-variants .color-variants-item .text-container .content .link:hover {
+  text-shadow: 0 0 2px black;
+}
+.color-variants .color-variants-item .color-variants-item-title {
+  position: relative;
+  font-weight: 100;
+  font-size: 20rem;
+  line-height: 1;
+  z-index: 4;
+  width: fit-content;
+  transform: rotate(-30deg);
+  position: absolute;
+  color: white;
+}
+.color-variants .color-variants-item .fill, .color-variants .color-variants-item .noise {
+  width: 100%;
+  height: 100%;
+  border-radius: 788px;
+  transform: rotate(-31.14deg);
+  overflow: hidden;
+}
+.color-variants .color-variants-item .fill {
+  position: relative;
+  z-index: 5;
+}
+.color-variants .color-variants-item .noise {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  transition: 0.3s ease;
+}
+.color-variants .color-variants-item--red .fill, .color-variants .color-variants-item--red .noise {
+  background-color: #F52C5C;
+}
+.color-variants .color-variants-item--red .noise {
+  filter: drop-shadow(0 0 800px #F52C5C);
+  transition: 0.3s ease;
+}
+.color-variants .color-variants-item--purple .fill, .color-variants .color-variants-item--purple .noise {
+  background-color: #8145FF;
+}
+.color-variants .color-variants-item--purple .noise {
+  filter: drop-shadow(0 0 800px #8145FF);
+}
+.color-variants .color-variants-item--blue .fill, .color-variants .color-variants-item--blue .noise {
+  background-color: #15E3FF;
+}
+.color-variants .color-variants-item--blue .noise {
+  filter: drop-shadow(0 0 800px #15E3FF);
+}
+.color-variants .color-variants-item--blue .text-container {
+  color: black;
+}
+.color-variants .color-variants-item--green .fill, .color-variants .color-variants-item--green .noise {
+  background-color: #45FF8F;
+}
+.color-variants .color-variants-item--green .noise {
+  filter: drop-shadow(0 0 800px #45FF8F);
+}
+.color-variants .color-variants-item--green .text-container {
+  color: black;
+}
+.color-variants .color-variants-item--yellow .fill, .color-variants .color-variants-item--yellow .noise {
+  background-color: #E8EB52;
+}
+.color-variants .color-variants-item--yellow .noise {
+  filter: drop-shadow(0 0 800px #E8EB52);
+}
+.color-variants .color-variants-item--yellow .text-container {
+  color: black;
+}
+.color-variants .color-variants-item:nth-child(odd) .color-block {
+  transform: translate(55%, -20%);
+}
+.color-variants .color-variants-item:nth-child(odd) .color-variants-item-title {
+  top: 50%;
+  right: 91%;
+}
+.color-variants .color-variants-item:nth-child(even) .color-block {
+  transform: translate(-45%, 20%);
+}
+.color-variants .color-variants-item:nth-child(even) .color-variants-item-title {
+  top: -3%;
+  left: 90%;
+}
+.color-variants .color-variants-item:nth-child(even) .text-container .content {
+  text-align: left;
+}
 /*# sourceMappingURL=style.css.map */

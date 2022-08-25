@@ -23,6 +23,15 @@ window.addEventListener("DOMContentLoaded", function () {
 		scalarY: 7,
 	});
 	// }
+	//Инициализация слайда с rellax
+	var rellax = new Rellax('.rellax', {
+		speed: 30,
+		// center: false,
+		// wrapper: null,
+		// round: true,
+		// vertical: false,
+		horizontal: true
+	});
 });
 
 //Инициализация Fullpage-блока
