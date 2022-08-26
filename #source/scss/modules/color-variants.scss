@@ -1,6 +1,9 @@
 .color-variants {
+	position: relative;
 	background-color: black;
-	// color: white;
+	.color-variants-item-wrapper {
+		overflow: hidden;
+	}
 	.color-variants-item {
 		position: relative;
 		.color-block {
@@ -47,15 +50,24 @@
 
 			}
 		}
+		// .color-variants-item-title-wrapper {
+			// position: relative;
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+		// }
 		.color-variants-item-title {
-			position: relative;
 			font-weight: 100;
 			font-size: 20rem;
 			line-height: 1;
 			z-index: 4;
 			width: fit-content;
 			transform: rotate(-30deg);
-			position: absolute;
+
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+
 			color: white;
 		}
 		.fill, .noise {
@@ -77,6 +89,13 @@
 			right: 0;
 			z-index: 3;
 			transition: 0.3s ease;
+			filter: none;
+		}
+	}
+	.color-variants-item:hover {
+		.noise {
+			transition: 0.3s ease;
+			// filter: blur(300px);
 		}
 	}
 	.color-variants-item--red {
@@ -84,8 +103,8 @@
 			background-color: #F52C5C;
 		}
 		.noise {
-			filter: drop-shadow(0 0 800px #F52C5C);
-			transition: 0.3s ease;
+			// filter: drop-shadow(0 0 800px #F52C5C);
+			box-shadow: 0 0 500px #f52c5c;
 		}
 	}
 	.color-variants-item--purple {
@@ -93,7 +112,8 @@
 			background-color: #8145FF;
 		}
 		.noise {
-			filter: drop-shadow(0 0 800px #8145FF);
+			box-shadow: 0 0 500px #8145FF;
+			// filter: drop-shadow(0 0 800px #8145FF);
 		}
 	}
 	.color-variants-item--blue {
@@ -101,7 +121,8 @@
 			background-color: #15E3FF;
 		}
 		.noise {
-			filter: drop-shadow(0 0 800px #15E3FF);
+			box-shadow: 0 0 500px #15E3FF;
+			// filter: drop-shadow(0 0 800px #15E3FF);
 		}
 		.text-container {
 			color: black;
@@ -112,7 +133,8 @@
 			background-color: #45FF8F;
 		}
 		.noise {
-			filter: drop-shadow(0 0 800px #45FF8F);
+			box-shadow: 0 0 500px #45FF8F;
+			// filter: drop-shadow(0 0 800px #45FF8F);
 		}
 		.text-container {
 			color: black;
@@ -123,7 +145,8 @@
 			background-color: #E8EB52;
 		}
 		.noise {
-			filter: drop-shadow(0 0 800px #E8EB52);
+			box-shadow: 0 0 500px #E8EB52;
+			// filter: drop-shadow(0 0 800px #E8EB52);
 		}
 		.text-container {
 			color: black;
@@ -133,7 +156,8 @@
 		.color-block {
 			transform: translate(55%, -20%);
 		}
-		.color-variants-item-title {
+		.color-variants-item-title-wrapper {
+			position: absolute;
 			top: 50%;
 			right: 91%;
 		}
@@ -142,7 +166,8 @@
 		.color-block {
 			transform: translate(-45%, 20%);
 		}
-		.color-variants-item-title {
+		.color-variants-item-title-wrapper {
+			position: absolute;
 			top: -3%;
 			left: 90%;
 		}

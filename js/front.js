@@ -23,16 +23,88 @@ window.addEventListener("DOMContentLoaded", function () {
 		scalarY: 7,
 	});
 	// }
-	//Инициализация слайда с rellax
-	var rellax = new Rellax('.rellax', {
-		speed: 30,
-		// center: false,
-		// wrapper: null,
-		// round: true,
-		// vertical: false,
-		horizontal: true
-	});
+
+	(function($) {
+		$(document).ready(function() {
+			$.jScrollability([
+				{
+					'selector': '#redTitle',
+					'start': 'parent',
+					'end': 5000,
+					'fn': {
+						'right': {
+							'start': 85,
+							'end': 105,
+							'unit': '%'
+						}
+					}
+				},
+				{
+					'selector': '#purpleTitle',
+					'start': 'parent',
+					'end': 6000,
+					'fn': {
+						'left': {
+							'start': 85,
+							'end': 105,
+							'unit': '%'
+						}
+					}
+				},
+				{
+					'selector': '#blueTitle',
+					'start': 'parent',
+					'end': 7000,
+					'fn': {
+						'right': {
+							'start': 80,
+							'end': 140,
+							'unit': '%'
+						}
+					}
+				},
+				{
+					'selector': '#greenTitle',
+					'start': 'parent',
+					'end': 8000,
+					'fn': {
+						'left': {
+							'start': 85,
+							'end': 145,
+							'unit': '%'
+						}
+					}
+				},
+				{
+					'selector': '#yellowTitle',
+					'start': 'parent',
+					'end': 9000,
+					'fn': {
+						'right': {
+							'start': 70,
+							'end': 155,
+							'unit': '%'
+						}
+					}
+				},
+			]);
+		});
+	})(jQuery);
+
+
+	// window.addEventListener("scroll", function () {
+	// 	scrollissimo.knock();
+	// });
+	// var redTitle = document.getElementById("redTitle");
+	// var divyTween = TweenLite.to(redTitle, 4500, { width: 300 });
+	// scrollissimo.add(divyTween, 4500, 25);
+
+	// var redTitleAnimation = new TweenLite(redTitle, 1000, { right: 300 });
+	// scrollissimo.add(redTitleAnimation, 0, 6);
 });
+
+
+
 
 //Инициализация Fullpage-блока
 const fullPage = new fullpage("#fullpage", {

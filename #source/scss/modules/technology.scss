@@ -1,0 +1,93 @@
+.technology {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        z-index: 15;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(180deg, #BFBFB2 2.08%, rgba(249, 249, 243, 0) 26.06%);
+
+    }
+    > .container,
+    > .container > .row {
+        height: 100%;
+    }
+    .technology-description {
+        padding-top: 200px;
+        font-weight: 100;
+        font-size: 2rem;
+        line-height: 1.5;
+
+        // background: linear-gradient(180deg, #1E1E1C 0%, rgba(0, 0, 0, 0) 100%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+        // text-fill-color: transparent;
+        .technology-title {
+            font-weight: 100;
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 3rem;
+            color: rgba(30, 30, 28, 0.7);
+
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        p {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    }
+    .technology-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .pic {
+            position: relative;
+            margin-bottom: -250px;
+            z-index: 10;
+            .smoke {
+                // position: relative;
+                position: absolute;
+                bottom: calc(100% - 15px);
+                left: -60px;
+                width: 350px;
+                z-index: 5;
+                > img {
+                    width: 100%;
+                }
+            }
+            .stick {
+                position: relative;
+                z-index: 10;
+            }
+        }
+    }
+    .bottom-smoke-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+
+.section.technology.fp-completely.active {
+    .technology-description {
+        .technology-title {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        p {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+        }
+    }
+}
