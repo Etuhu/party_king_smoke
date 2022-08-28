@@ -10,7 +10,6 @@
         width: 100%;
         height: 50%;
         background: linear-gradient(180deg, #BFBFB2 2.08%, rgba(249, 249, 243, 0) 26.06%);
-
     }
     > .container,
     > .container > .row {
@@ -59,6 +58,8 @@
                 left: -60px;
                 width: 350px;
                 z-index: 5;
+                opacity: 0;
+                transition: 0.3s ease;
                 > img {
                     width: 100%;
                 }
@@ -66,6 +67,9 @@
             .stick {
                 position: relative;
                 z-index: 10;
+                transform: translateY(100px);
+                opacity: 0;
+                transition: 0.3s ease;
             }
         }
     }
@@ -82,12 +86,26 @@
         .technology-title {
             opacity: 1;
             transform: translateY(0);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition: opacity 0.45s ease 0.8s, transform 0.45s ease 0.8s;
         }
         p {
             opacity: 1;
             transform: translateY(0);
-            transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+            transition: opacity 0.45s ease 1s, transform 0.45s ease 1s;
+        }
+    }
+
+    .technology-image {
+        .pic {
+            .smoke {
+                opacity: 1;
+                transition: 0.6s ease 0.55s;
+            }
+            .stick {
+                transform: translateY(0);
+                opacity: 1;
+                transition: 0.7s ease;
+            }
         }
     }
 }

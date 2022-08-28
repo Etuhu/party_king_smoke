@@ -1267,6 +1267,8 @@ a {
   left: -60px;
   width: 350px;
   z-index: 5;
+  opacity: 0;
+  transition: 0.3s ease;
 }
 .technology .technology-image .pic .smoke > img {
   width: 100%;
@@ -1274,6 +1276,9 @@ a {
 .technology .technology-image .pic .stick {
   position: relative;
   z-index: 10;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.3s ease;
 }
 .technology .bottom-smoke-wrapper {
   position: absolute;
@@ -1284,11 +1289,80 @@ a {
 .section.technology.fp-completely.active .technology-description .technology-title {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.45s ease 0.8s, transform 0.45s ease 0.8s;
 }
 .section.technology.fp-completely.active .technology-description p {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+  transition: opacity 0.45s ease 1s, transform 0.45s ease 1s;
+}
+.section.technology.fp-completely.active .technology-image .pic .smoke {
+  opacity: 1;
+  transition: 0.6s ease 0.55s;
+}
+.section.technology.fp-completely.active .technology-image .pic .stick {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.7s ease;
+}
+
+.power {
+  position: relative;
+  background-image: url("../img/cap.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-weight: 100;
+  font-size: 2.67rem;
+  line-height: 1;
+}
+.power > .container,
+.power > .container > .row {
+  height: 100%;
+}
+.power > .container > .row {
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.power .top-smoke-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.power .no-analogy {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+.power .power-title {
+  position: relative;
+  z-index: 5;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 4rem;
+}
+.power .power-title .power-subtitle {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  z-index: 15;
+}
+.power .power-features ul {
+  list-style: none;
+  padding: 0;
+  padding-right: 100px;
+  margin: 0;
+}
+.power .power-features ul li {
+  line-height: 1.5;
+  text-align: right;
+  margin-bottom: 0.7rem;
+}
+.power .horizontal-stick {
+  position: absolute;
+  bottom: -83px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /*# sourceMappingURL=style.css.map */
