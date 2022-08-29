@@ -22,6 +22,18 @@ window.addEventListener("DOMContentLoaded", function () {
 		scalarX: 7,
 		scalarY: 7,
 	});
+
+	let specialOfferBg = document.getElementById("parallax-specialOfferBg");
+	let parallaxspecialOfferBg = new Parallax(specialOfferBg, {
+		relativeInput: true,
+		hoverOnly: true,
+		clipRelativeInput: true,
+		recordHistory: true,
+		limitX: 150,
+		limitY: 300,
+		scalarX: 7,
+		scalarY: 10,
+	});
 	// }
 
 	(function($) {
@@ -114,7 +126,7 @@ const fullPage = new fullpage("#fullpage", {
 	scrollHorizontally: true,
 	verticalCentered: false,
 	scrollingSpeed: 700,
-	paddingTop: "0px",
+	// paddingTop: "0px",
 	scrollOverflow: true,
 	// responsiveWidth: 992,
 	// responsiveHeight: 0,
