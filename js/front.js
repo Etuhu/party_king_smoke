@@ -116,9 +116,10 @@ const fullPage = new fullpage("#fullpage", {
 	scrollingSpeed: 700,
 	paddingTop: "0px",
 	scrollOverflow: true,
-	responsiveWidth: 992,
-	responsiveHeight: 0,
+	// responsiveWidth: 992,
+	// responsiveHeight: 0,
 	lazyLoading: true,
+	recordHistory: true,
 	observer: true,
 	credits: { enabled: false, label: "Made with fullPage.js", position: "right" },
 });

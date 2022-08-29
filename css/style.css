@@ -1284,6 +1284,12 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100%;
+}
+.technology .bottom-smoke-wrapper > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section.technology.fp-completely.active .technology-description .technology-title {
@@ -1330,10 +1336,21 @@ a {
   top: 0;
   left: 0;
   z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+.power .top-smoke-wrapper > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .power .no-analogy {
   margin-top: 5rem;
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 20;
+  opacity: 0;
+  transform: translate(-20px, 20px) !important;
 }
 .power .power-title {
   position: relative;
@@ -1341,12 +1358,19 @@ a {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 4rem;
+  transform: translateX(-150%) !important;
+  will-change: transform;
 }
 .power .power-title .power-subtitle {
   position: absolute;
   top: 0;
   left: 300px;
   z-index: 15;
+  opacity: 0;
+}
+.power .power-features {
+  position: relative;
+  z-index: 20;
 }
 .power .power-features ul {
   list-style: none;
@@ -1358,11 +1382,121 @@ a {
   line-height: 1.5;
   text-align: right;
   margin-bottom: 0.7rem;
+  opacity: 0;
+  transform: translateX(30px);
 }
 .power .horizontal-stick {
   position: absolute;
   bottom: -83px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 83px);
+}
+
+.section.power.fp-completely.active .power-title {
+  transform: translateX(0) !important;
+  transition: transform 1s cubic-bezier(0, 0, 0.05, 1);
+}
+.section.power.fp-completely.active .power-title .power-subtitle {
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0, 0, 0.05, 1) 1s;
+}
+.section.power.fp-completely.active .horizontal-stick {
+  transform: translate(-50%, 0);
+  transition: 0.7s ease;
+}
+.section.power.fp-completely.active .no-analogy {
+  opacity: 1;
+  transform: translate(0) !important;
+  transition: 0.3s cubic-bezier(0, 0, 0.05, 1) 1.3s;
+}
+.section.power.fp-completely.active .power-features ul li {
+  opacity: 1;
+  transform: translateX(0);
+}
+.section.power.fp-completely.active .power-features ul li:first-child {
+  transition: 0.4s cubic-bezier(0, 0, 0.05, 1) 1.6s;
+}
+.section.power.fp-completely.active .power-features ul li:nth-child(2) {
+  transition: 0.4s cubic-bezier(0, 0, 0.05, 1) 1.9s;
+}
+.section.power.fp-completely.active .power-features ul li:nth-child(3) {
+  transition: 0.4s cubic-bezier(0, 0, 0.05, 1) 2.1s;
+}
+
+.how-it-works {
+  padding-top: 7rem !important;
+  padding-bottom: 3rem !important;
+}
+.how-it-works .horizontal-stick {
+  position: absolute;
+  top: -83px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: 0.1s ease;
+}
+.how-it-works .horizontal-stick::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  position: absolute;
+  background-image: radial-gradient(491.67% 491.67% at 50% 50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 50%;
+}
+.how-it-works .how-it-works-title {
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 1.1;
+  color: rgba(30, 30, 28, 0.7);
+  opacity: 0;
+  transform: translateX(-100px) !important;
+  will-change: transform;
+}
+.how-it-works .how-it-works-description {
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1E1E1C;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(100px) !important;
+  will-change: transform;
+}
+.how-it-works .how-it-works-description p:last-child {
+  margin-bottom: 0;
+}
+.how-it-works .how-it-works-video {
+  margin-bottom: 3rem;
+  opacity: 0;
+  will-change: transform;
+  transform: translateY(100px) !important;
+}
+.how-it-works .how-it-works-video-title {
+  font-weight: 500;
+  font-size: 2.67rem;
+  line-height: 1;
+  color: black;
+}
+.how-it-works .how-it-works-video-subtitle {
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.section.how-it-works.fp-completely.active .how-it-works-title {
+  opacity: 1;
+  transform: translateX(0) !important;
+  transition: 0.3s ease;
+}
+.section.how-it-works.fp-completely.active .how-it-works-description {
+  opacity: 1;
+  transform: translateY(0) !important;
+  transition: 0.3s ease 0.2s;
+}
+.section.how-it-works.fp-completely.active .how-it-works-video {
+  opacity: 1;
+  transform: translateY(0) !important;
+  transition: 0.3s ease 0.4s;
 }
 /*# sourceMappingURL=style.css.map */
