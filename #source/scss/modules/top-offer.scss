@@ -186,12 +186,12 @@
         .top-offer-pic {
             transform: translate(0, 0);
             opacity: 1;
-            transition: 0.3s ease 0.5s;
+            transition: 0.5s ease 0.5s;
         }
         .top-offer-text {
             &::after {
                 transform: translateX(100%);
-                transition: 0.5s ease 0.7s;
+                transition: 1s ease 1s;
             }
         }
         .top-offer-text .price-link {
@@ -202,13 +202,13 @@
 	.special-offer-wrapper {
         &::after,
         &::before {
-            transition: 0.5s ease 0.7s;
+            transition: 1s ease 1s;
         }
         &::before {
-            transform: translateY(-100%);
+            transform: translateY(-110%);
         }
         &::after {
-            transform: translateY(100%);
+            transform: translateY(110%);
         }
     }
 }

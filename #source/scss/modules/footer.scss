@@ -1,0 +1,80 @@
+.footer-wrapper {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.footer {
+    padding-bottom: 50px;
+    .footer-top-line {
+        padding-top: 90px;
+        padding-bottom: 65px;
+        .footer-title {
+            font-weight: 100;
+            font-size: 2rem;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        .footer-subtitle {
+            font-weight: 100;
+            font-size: 0.8rem;
+            line-height: 1.3;
+        }
+        .link {
+            color: $red;
+            font-weight: 100;
+            font-size: 0.8rem;
+            line-height: 1.3;
+            transition: 0.3s ease;
+            &:hover {
+                text-shadow: 0 0 3px $red;
+                transition: 0.3s ease;
+            }
+        }
+    }
+    .footer-bottom-line {
+        .footer-menu {
+            padding-top: 35px;
+            padding-bottom: 35px;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                li {
+                    margin-left: 100px;
+                    margin-right: 100px;
+                    a {
+                        font-weight: 100;
+                        font-size: 0.8rem;
+                        line-height: 1.5;
+                        color: $darkgrey;
+                        transition: 0.3s ease;
+                        &:hover {
+                            color: $red;
+                            text-shadow: 0 0 1px $red;
+                            transition: 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-disclaimer {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-top: 1px solid rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+            font-weight: 100;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            a {
+                color: $red;
+                transition: 0.3s ease;
+                &:hover {
+                    text-shadow: 0 0 1px $red;
+                    transition: 0.3s ease;
+                }
+            }
+        }
+    }
+}
