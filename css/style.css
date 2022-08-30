@@ -790,9 +790,12 @@ a {
   transition: 0.3s ease;
 }
 
-.header.slide-top {
+.header.hidden {
   transform: translateY(-100%);
   transition: 0.3s ease;
+}
+.header.hidden.fixed-visible {
+  transform: translateY(0);
 }
 
 .king-box-kit .color-block {

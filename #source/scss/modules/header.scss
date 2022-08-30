@@ -1,20 +1,20 @@
 .header {
 	background-color: #660606;
 	color: #f9f9f3;
-    transition: 0.3s ease;
-    // z-index: 100;
-    // position: relative;
+	transition: 0.3s ease;
+	// z-index: 100;
+	// position: relative;
 	.logo-wrapper {
 		padding-top: 15px;
 		padding-bottom: 15px;
-        > a {
-            color: #f9f9f3;
-            transition: 0.3s ease;
-            &:hover {
-                opacity: 0.7;
-                transition: 0.3s ease;
-            }
-        }
+		> a {
+			color: #f9f9f3;
+			transition: 0.3s ease;
+			&:hover {
+				opacity: 0.7;
+				transition: 0.3s ease;
+			}
+		}
 		.logo-text {
 			font-weight: 700;
 			font-size: 0.8rem;
@@ -74,7 +74,10 @@
 	}
 }
 
-.header.slide-top {
-    transform: translateY(-100%);
-    transition: 0.3s ease;
+.header.hidden {
+	transform: translateY(-100%);
+	transition: 0.3s ease;
+	&.fixed-visible {
+		transform: translateY(0);
+	}
 }

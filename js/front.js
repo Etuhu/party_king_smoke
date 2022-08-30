@@ -126,45 +126,50 @@ const fullPage = new fullpage("#fullpage", {
 	credits: { enabled: false, label: "Made with fullPage.js", position: "right" },
 	onLeave: function(origin, destination, direction, trigger){
 		var origin = this;
+		if (destination.item.classList.value.indexOf("animated") == -1) {
+			destination.item.classList.value += " animated";
+		}
+
 		//после покидания раздела 1
-		if(origin.index == 0 && direction =='down'){
-			addVisibleHeader();
+		if (destination.isFirst) {
+			showHeader();
+			if (!header.classList.contains("fixed-visible")) {
+				header.classList.add("fixed-visible");
+			}
 		}
-		else if(origin.index == 1 && direction == 'up'){
-			removeVisibleHeader();
-		}
-	},
-	afterLoad: function(origin, destination, direction, trigger){
-		var origin = this;
-		if(origin.index !== 0){
+		else {
+			if (header.classList.contains("fixed-visible")) {
+				header.classList.remove("fixed-visible");
+			}
+			hiddenHeader();
 			mouseMoveToTop();
 		}
-	}
+	},
 });
 
 
 //Появление и исчезнование шапки сайта
 let header = document.querySelector(".header");
 
-let addVisibleHeader = function () {
-	if (!header.classList.contains("slide-top")) {
-		header.classList.add("slide-top");
+let hiddenHeader = function () {
+	if (!header.classList.contains("hidden")) {
+		header.classList.add("hidden");
 	}
 };
 
-let removeVisibleHeader = function () {
-	if (header.classList.contains("slide-top")) {
-		header.classList.remove("slide-top");
+let showHeader = function () {
+	if (header.classList.contains("hidden")) {
+		header.classList.remove("hidden");
 	}
 };
 
 //Появление шапки при наведении на верхнюю часть окна и ее отключение при уходе в другую зону
-let mouseMoveToTop = function () {
+function mouseMoveToTop () {
 	window.addEventListener("mousemove", function (evt) {
 		if (evt.clientY <= header.clientHeight) {
-			removeVisibleHeader();
+			showHeader();
 		} else if (evt.clientY > header.clientHeight) {
-			addVisibleHeader();
+			hiddenHeader();
 		}
 	});
 };
@@ -206,7 +211,6 @@ const swiperChoose = new Swiper(".choose-swiper", {
 			var filterColors = colors.reduce((result, item) => {
 				return result.includes(item) ? result : [...result, item];
 			}, []);
-			console.log(index);
 			return '<span class="' + className + " " + filterColors[index] + '">' + filterColors[index] + "</span>";
 		},
 	},
