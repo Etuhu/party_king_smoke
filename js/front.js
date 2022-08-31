@@ -106,17 +106,26 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 
+var addAnimatedClass = function (el) {
+	if (!el.item.classList.contains("animated")) {
+		el.item.classList.add("animated");
+	}
+};
+
+var removeAnimatedClass = function (el) {
+	if (el.item.classList.contains("animated")) {
+		el.item.classList.remove("animated");
+	}
+};
 
 
 //Инициализация Fullpage-блока
 const fullPage = new fullpage("#fullpage", {
 	licenseKey: null,
-	//options here
 	autoScrolling: true,
 	scrollHorizontally: true,
 	verticalCentered: false,
 	scrollingSpeed: 700,
-	// paddingTop: "0px",
 	scrollOverflow: true,
 	// responsiveWidth: 992,
 	// responsiveHeight: 0,
@@ -124,19 +133,24 @@ const fullPage = new fullpage("#fullpage", {
 	recordHistory: true,
 	observer: true,
 	credits: { enabled: false, label: "Made with fullPage.js", position: "right" },
+	// beforeLeave: function(origin, destination, direction, trigger){
+	// 	if (direction =='up') {
+	// 		setTimeout(removeAnimatedClass, 400, origin);
+	// 	};
+	// },
 	onLeave: function(origin, destination, direction, trigger){
-		var origin = this;
-		if (destination.item.classList.value.indexOf("animated") == -1) {
-			destination.item.classList.value += " animated";
+		// var origin = this;
+		if (direction =='down') {
+			addAnimatedClass(destination);
 		}
 
-		//после покидания раздела 1
 		if (destination.isFirst) {
 			showHeader();
 			if (!header.classList.contains("fixed-visible")) {
 				header.classList.add("fixed-visible");
 			}
 		}
+
 		else {
 			if (header.classList.contains("fixed-visible")) {
 				header.classList.remove("fixed-visible");
@@ -146,15 +160,12 @@ const fullPage = new fullpage("#fullpage", {
 		}
 	},
 	afterLoad: function(origin, destination, direction, trigger){
-		var origin = this;
-
-		// if(origin.index == 0){
-			if (origin.item.classList.value.indexOf("animated") == -1) {
-				origin.item.classList.value += " animated";
-			}
-		// }
+		// var origin = this;
+		addAnimatedClass(origin);
 	},
 });
+
+
 
 
 //Появление и исчезнование шапки сайта

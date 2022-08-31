@@ -106,17 +106,22 @@
 .section.there-is.animated {
 	.there-is-title {
 		animation: slideToRight 3s forwards cubic-bezier(0,0,.05,1) 0.5s;
+		animation-delay: 1.2s;
 	}
 	.video-wrapper {
 		animation: fadeToLeft 0.8s forwards ease;
+		animation-delay: 0.7s;
 	}
 	.video-wrapper-bottom {
 		animation: fadeToRight 0.8s forwards ease;
+		animation-delay: 0.7s;
 	}
 	h3.subtitle {
 		animation: fadeTextToUp 0.3s forwards ease 1.7s;
+		animation-delay: 2.4s;
 	}
 	.features-item {
 		animation: fadeTextToUp 1s forwards ease 2s;
+		animation-delay: 2.7s;
 	}
 }
