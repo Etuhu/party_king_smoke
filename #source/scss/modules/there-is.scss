@@ -1,6 +1,5 @@
 .there-is {
 	position: relative;
-	// padding-top: 2rem !important;
 	background: linear-gradient(120.49deg, #231557 -0.46%, #44107A 30.03%, #FF1361 82.05%);
 	.parallax-block {
 		width: 100%;
@@ -30,8 +29,9 @@
 	.bottom-video-parallax {
 		z-index: 5;
 	}
+	.there-is-title-wrapper {
 
-
+	}
 	.there-is-title{
 		color: white;
 		font-weight: 100;
@@ -40,7 +40,7 @@
 		margin-left: -5rem;
 		top: 2rem;
 		z-index: 5;
-		transform: translateX(-100%) !important;
+		transform: translateX(-100%);
 		will-change: transform;
 	}
 	h3.subtitle {
@@ -79,16 +79,7 @@
 			will-change: opacity, transform;
 		}
 	}
-	// h1 {
-	// 	color: white;
-	// 	position: relative;
-	// 	z-index: 10;
-	// 	font-size: 25rem;
-	// 	margin: 0;
-	// }
 	.video-wrapper {
-		// height: 100%;
-		// width: 100%;
 		position: absolute;
 		top: 50px !important;
 		right: -150px !important;
@@ -97,29 +88,6 @@
 		text-align: right;
 		opacity: 0;
 		will-change: opacity;
-		.smoke-video {
-			// width: 65%;
-			// position: absolute;
-			// right: 0;
-			// top: 0;
-		}
-		// &::before {
-		// 	content: "";
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	background: #f00;
-		// 	background: linear-gradient(to right, #df0037, #d80081, #950172, #476ddf, #4a339a, #3747b7);
-		// 	mix-blend-mode: color;
-		// 	pointer-events: none;
-		// }
-		// .smoke-video-left {
-		// 	height: 100vh;
-		// 	width: 100%;
-		// 	object-fit: cover;
-		// }
 	}
 	.video-wrapper-bottom {
 		position: absolute;
@@ -135,11 +103,9 @@
 }
 
 
-.section.there-is.fp-completely.active {
+.section.there-is.animated {
 	.there-is-title {
-		transform: translateX(0) !important;
-		transition: transform 3s cubic-bezier(0,0,.05,1) 0.5s;
-		// animation: slideToRight 3s cubic-bezier(0,0,.05,1) 0.5s !important;
+		animation: slideToRight 3s forwards cubic-bezier(0,0,.05,1) 0.5s;
 	}
 	.video-wrapper {
 		animation: fadeToLeft 0.8s forwards ease;

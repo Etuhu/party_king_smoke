@@ -625,12 +625,55 @@ a {
     transform: translateX(0);
   }
 }
+@keyframes slideToLeftLong {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @keyframes slideToRight {
   0% {
     transform: translateX(-100%);
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes slideToRightReverse {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes slideToRight150p {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideToTop110p {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-110%);
+  }
+}
+@keyframes slideToBottom110p {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(110%);
   }
 }
 @keyframes slideToLeftZoom {
@@ -672,10 +715,90 @@ a {
     transform: translateX(0);
   }
 }
+@keyframes fadeDiagToTopRight {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes fadeDiagToTopRight100p {
+  0% {
+    opacity: 0;
+    transform: translate(-100px, 100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 @keyframes fadeTextToUp {
   0% {
     opacity: 0;
     transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeTextToUp100p {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeTextToUp50p {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeTextToLeft30p {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeTextToLeft150p {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeTextToRight100p {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeTextToRight170p {
+  0% {
+    opacity: 0;
+    transform: translateX(-170px);
   }
   100% {
     opacity: 1;
@@ -690,6 +813,14 @@ a {
   100% {
     opacity: 1;
     transform: translate(-50%, 0);
+  }
+}
+@keyframes zindexUp {
+  0% {
+    z-index: 10;
+  }
+  100% {
+    z-index: 25;
   }
 }
 @keyframes doubleFlashText {
@@ -885,31 +1016,28 @@ a {
   text-shadow: 0 0 3px #E41117;
 }
 
-.section.king-box-kit.fp-completely.active .color-block {
+.section.king-box-kit.animated .color-block {
   animation: fade 0.8s forwards ease;
 }
-.section.king-box-kit.fp-completely.active .color-block .scroll-title {
+.section.king-box-kit.animated .color-block .scroll-title {
   animation: slideToLeft 3s forwards cubic-bezier(0, 0, 0.05, 1) 0.5s;
 }
-.section.king-box-kit.fp-completely.active .king-box-wrapper {
-  margin-top: -400px;
-}
-.section.king-box-kit.fp-completely.active .king-box-wrapper .king-box-pic .box-wrapper {
+.section.king-box-kit.animated .king-box-wrapper .king-box-pic .box-wrapper {
   animation: fadeToRight 0.5s forwards ease 0.5s;
 }
-.section.king-box-kit.fp-completely.active .king-box-wrapper .king-box-pic .box-wrapper .box-cap-wrapper {
+.section.king-box-kit.animated .king-box-wrapper .king-box-pic .box-wrapper .box-cap-wrapper {
   animation: slideToLeftZoom 1s forwards ease-in-out 1s;
 }
-.section.king-box-kit.fp-completely.active .king-box-text > h3 {
+.section.king-box-kit.animated .king-box-text > h3 {
   animation: fadeTextToUp 0.3s forwards ease 1.7s;
 }
-.section.king-box-kit.fp-completely.active .king-box-text > p {
+.section.king-box-kit.animated .king-box-text > p {
   animation: fadeTextToUp 0.3s forwards ease 2s;
 }
-.section.king-box-kit.fp-completely.active .king-box-text > p.price-block {
+.section.king-box-kit.animated .king-box-text > p.price-block {
   animation: fadeTextToUp 0.3s forwards ease 2.3s;
 }
-.section.king-box-kit.fp-completely.active .king-box-text > .price-link {
+.section.king-box-kit.animated .king-box-text > .price-link {
   animation: doubleFlashText 0.8s forwards ease 2.8s;
 }
 
@@ -953,7 +1081,7 @@ a {
   margin-left: -5rem;
   top: 2rem;
   z-index: 5;
-  transform: translateX(-100%) !important;
+  transform: translateX(-100%);
   will-change: transform;
 }
 .there-is h3.subtitle {
@@ -1010,20 +1138,19 @@ a {
   will-change: opacity;
 }
 
-.section.there-is.fp-completely.active .there-is-title {
-  transform: translateX(0) !important;
-  transition: transform 3s cubic-bezier(0, 0, 0.05, 1) 0.5s;
+.section.there-is.animated .there-is-title {
+  animation: slideToRight 3s forwards cubic-bezier(0, 0, 0.05, 1) 0.5s;
 }
-.section.there-is.fp-completely.active .video-wrapper {
+.section.there-is.animated .video-wrapper {
   animation: fadeToLeft 0.8s forwards ease;
 }
-.section.there-is.fp-completely.active .video-wrapper-bottom {
+.section.there-is.animated .video-wrapper-bottom {
   animation: fadeToRight 0.8s forwards ease;
 }
-.section.there-is.fp-completely.active h3.subtitle {
+.section.there-is.animated h3.subtitle {
   animation: fadeTextToUp 0.3s forwards ease 1.7s;
 }
-.section.there-is.fp-completely.active .features-item {
+.section.there-is.animated .features-item {
   animation: fadeTextToUp 1s forwards ease 2s;
 }
 
@@ -1324,12 +1451,10 @@ a {
   color: rgba(30, 30, 28, 0.7);
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .technology .technology-description p {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .technology .technology-image {
   display: flex;
@@ -1348,7 +1473,6 @@ a {
   width: 350px;
   z-index: 5;
   opacity: 0;
-  transition: 0.3s ease;
 }
 .technology .technology-image .pic .smoke > img {
   width: 100%;
@@ -1358,7 +1482,6 @@ a {
   z-index: 10;
   transform: translateY(100px);
   opacity: 0;
-  transition: 0.3s ease;
 }
 .technology .bottom-smoke-wrapper {
   position: absolute;
@@ -1372,24 +1495,17 @@ a {
   object-fit: cover;
 }
 
-.section.technology.fp-completely.active .technology-description .technology-title {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.45s ease 0.8s, transform 0.45s ease 0.8s;
+.section.technology.animated .technology-description .technology-title {
+  animation: fadeTextToUp50p 0.45s forwards ease 1.6s;
 }
-.section.technology.fp-completely.active .technology-description p {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.45s ease 1s, transform 0.45s ease 1s;
+.section.technology.animated .technology-description p {
+  animation: fadeTextToUp50p 0.45s forwards ease 1.8s;
 }
-.section.technology.fp-completely.active .technology-image .pic .smoke {
-  opacity: 1;
-  transition: 0.6s ease 0.55s;
+.section.technology.animated .technology-image .pic .smoke {
+  animation: fade 0.6s forwards ease 1.2s;
 }
-.section.technology.fp-completely.active .technology-image .pic .stick {
-  transform: translateY(0);
-  opacity: 1;
-  transition: 0.7s ease;
+.section.technology.animated .technology-image .pic .stick {
+  animation: fadeTextToUp100p 0.7s forwards ease 0.7s;
 }
 
 .power {
@@ -1430,7 +1546,7 @@ a {
   position: relative;
   z-index: 20;
   opacity: 0;
-  transform: translate(-20px, 20px) !important;
+  transform: translate(-20px, 20px);
 }
 .power .power-title {
   position: relative;
@@ -1438,7 +1554,7 @@ a {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 4rem;
-  transform: translateX(-150%) !important;
+  transform: translateX(-200%);
   will-change: transform;
 }
 .power .power-title .power-subtitle {
@@ -1465,42 +1581,27 @@ a {
   opacity: 0;
   transform: translateX(30px);
 }
-.power .horizontal-stick {
-  position: absolute;
-  bottom: -83px;
-  left: 50%;
-  transform: translate(-50%, 83px);
-}
 
-.section.power.fp-completely.active .power-title {
-  transform: translateX(0) !important;
-  transition: transform 1s cubic-bezier(0, 0, 0.05, 1);
+.section.power.animated .power-title {
+  animation: slideToRight150p 1s forwards cubic-bezier(0, 0, 0.05, 1) 0.7s;
 }
-.section.power.fp-completely.active .power-title .power-subtitle {
-  opacity: 1;
-  transition: opacity 0.3s cubic-bezier(0, 0, 0.05, 1) 1s;
+.section.power.animated .power-title .power-subtitle {
+  animation: fade 0.3s forwards cubic-bezier(0, 0, 0.05, 1) 1.7s;
 }
-.section.power.fp-completely.active .horizontal-stick {
-  transform: translate(-50%, 0);
-  transition: 0.7s ease;
+.section.power.animated .no-analogy {
+  animation: fadeDiagToTopRight 0.3s forwards cubic-bezier(0, 0, 0.05, 1) 2s;
 }
-.section.power.fp-completely.active .no-analogy {
-  opacity: 1;
-  transform: translate(0) !important;
-  transition: 0.3s cubic-bezier(0, 0, 0.05, 1) 1.3s;
+.section.power.animated .power-features ul li {
+  animation: fadeTextToLeft30p 0.4s forwards cubic-bezier(0, 0, 0.05, 1);
 }
-.section.power.fp-completely.active .power-features ul li {
-  opacity: 1;
-  transform: translateX(0);
+.section.power.animated .power-features ul li:first-child {
+  animation-delay: 2.3s;
 }
-.section.power.fp-completely.active .power-features ul li:first-child {
-  transition: 0.4s cubic-bezier(0, 0, 0.05, 1) 1.6s;
+.section.power.animated .power-features ul li:nth-child(2) {
+  animation-delay: 2.6s;
 }
-.section.power.fp-completely.active .power-features ul li:nth-child(2) {
-  transition: 0.4s cubic-bezier(0, 0, 0.05, 1) 1.9s;
-}
-.section.power.fp-completely.active .power-features ul li:nth-child(3) {
-  transition: 0.4s cubic-bezier(0, 0, 0.05, 1) 2.1s;
+.section.power.animated .power-features ul li:nth-child(3) {
+  animation-delay: 2.8s;
 }
 
 .how-it-works {
@@ -1530,7 +1631,7 @@ a {
   line-height: 1.1;
   color: rgba(30, 30, 28, 0.7);
   opacity: 0;
-  transform: translateX(-100px) !important;
+  transform: translateX(-100px);
   will-change: transform;
 }
 .how-it-works .how-it-works-description {
@@ -1540,7 +1641,7 @@ a {
   color: #1E1E1C;
   margin-bottom: 3rem;
   opacity: 0;
-  transform: translateY(100px) !important;
+  transform: translateY(100px);
   will-change: transform;
 }
 .how-it-works .how-it-works-description p:last-child {
@@ -1550,7 +1651,7 @@ a {
   margin-bottom: 3rem;
   opacity: 0;
   will-change: transform;
-  transform: translateY(100px) !important;
+  transform: translateY(100px);
 }
 .how-it-works .how-it-works-video-title {
   font-weight: 500;
@@ -1564,20 +1665,17 @@ a {
   line-height: 1.5;
 }
 
-.section.how-it-works.fp-completely.active .how-it-works-title {
-  opacity: 1;
-  transform: translateX(0) !important;
-  transition: 0.3s ease;
+.section.how-it-works.animated .how-it-works-title {
+  animation: fadeTextToRight100p 0.4s forwards ease;
+  animation-delay: 0.7s;
 }
-.section.how-it-works.fp-completely.active .how-it-works-description {
-  opacity: 1;
-  transform: translateY(0) !important;
-  transition: 0.3s ease 0.2s;
+.section.how-it-works.animated .how-it-works-description {
+  animation: fadeTextToUp100p 0.4s forwards ease 0.3s;
+  animation-delay: 1s;
 }
-.section.how-it-works.fp-completely.active .how-it-works-video {
-  opacity: 1;
-  transform: translateY(0) !important;
-  transition: 0.3s ease 0.4s;
+.section.how-it-works.animated .how-it-works-video {
+  animation: fadeTextToUp100p 0.6s forwards ease 0.5s;
+  animation-delay: 1.2s;
 }
 
 .top-offer > .container,
@@ -1605,7 +1703,6 @@ a {
 .top-offer .top-offer-wrapper .top-offer-title > span {
   display: inline-block;
   opacity: 0;
-  transition: 0.3s ease;
 }
 .top-offer .top-offer-wrapper .top-offer-title > span:first-child {
   transform: translateX(-170px);
@@ -1620,7 +1717,6 @@ a {
   z-index: 20;
   transform: translate(-100px, 100px);
   opacity: 0;
-  transition: 0.3s ease;
 }
 .top-offer .top-offer-wrapper .top-offer-text {
   position: relative;
@@ -1640,6 +1736,7 @@ a {
   height: 100%;
   z-index: 15;
   background-color: #F9F9F3;
+  transform: translateX(0);
 }
 .top-offer .top-offer-wrapper .top-offer-text h3 {
   font-weight: 100;
@@ -1746,37 +1843,33 @@ a {
   transform: translate(-125px, -200px);
 }
 
-.section.top-offer.fp-completely.active .top-offer-wrapper .top-offer-title > span {
-  opacity: 1;
-  transition: 0.3s ease 0.2s;
+.section.top-offer.animated .top-offer-wrapper .top-offer-title > span:first-child {
+  animation: fadeTextToRight170p 0.3s forwards ease 0.2s;
+  animation-delay: 0.9s;
 }
-.section.top-offer.fp-completely.active .top-offer-wrapper .top-offer-title > span:first-child {
-  transform: translateX(0);
+.section.top-offer.animated .top-offer-wrapper .top-offer-title > span:nth-child(2) {
+  animation: fadeTextToLeft150p 0.3s forwards ease 0.2s;
+  animation-delay: 0.9s;
 }
-.section.top-offer.fp-completely.active .top-offer-wrapper .top-offer-title > span:nth-child(2) {
-  transform: translateX(0);
+.section.top-offer.animated .top-offer-wrapper .top-offer-pic {
+  animation: fadeDiagToTopRight100p 0.5s forwards ease 0.5s;
+  animation-delay: 1.2s;
 }
-.section.top-offer.fp-completely.active .top-offer-wrapper .top-offer-pic {
-  transform: translate(0, 0);
-  opacity: 1;
-  transition: 0.5s ease 0.5s;
+.section.top-offer.animated .top-offer-wrapper .top-offer-text::after {
+  animation: slideToRightReverse 1s forwards ease 1s;
+  animation-delay: 1.7s;
 }
-.section.top-offer.fp-completely.active .top-offer-wrapper .top-offer-text::after {
-  transform: translateX(100%);
-  transition: 1s ease 1s;
+.section.top-offer.animated .top-offer-wrapper .top-offer-text .price-link {
+  animation: zindexUp 0.1s forwards ease 1s;
+  animation-delay: 1.7s;
 }
-.section.top-offer.fp-completely.active .top-offer-wrapper .top-offer-text .price-link {
-  transition: z-index 0.1s ease 1s;
-  z-index: 25;
+.section.top-offer.animated .special-offer-wrapper::before {
+  animation: slideToTop110p 1s forwards ease 1s;
+  animation-delay: 1.7s;
 }
-.section.top-offer.fp-completely.active .special-offer-wrapper::after, .section.top-offer.fp-completely.active .special-offer-wrapper::before {
-  transition: 1s ease 1s;
-}
-.section.top-offer.fp-completely.active .special-offer-wrapper::before {
-  transform: translateY(-110%);
-}
-.section.top-offer.fp-completely.active .special-offer-wrapper::after {
-  transform: translateY(110%);
+.section.top-offer.animated .special-offer-wrapper::after {
+  animation: slideToBottom110p 1s forwards ease 1s;
+  animation-delay: 1.7s;
 }
 
 .catalog-widget .catalog-widget-title {

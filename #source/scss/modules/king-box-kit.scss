@@ -81,17 +81,15 @@
                 opacity: 0;
                 transform: scale(0.3);
                 will-change: opacity, transform;
-                // transition: text-shadow 0.3s ease;
                 &:hover {
                     text-shadow: 0 0 3px $red;
-                    // transition: text-shadow 0.3s ease;
                 }
             }
         }
     }
 }
 
-.section.king-box-kit.fp-completely.active {
+.section.king-box-kit.animated {
     .color-block {
         animation: fade 0.8s forwards ease;
         .scroll-title {
@@ -99,7 +97,6 @@
         }
     }
     .king-box-wrapper {
-        margin-top: -400px;
         .king-box-pic {
             .box-wrapper {
                 animation: fadeToRight 0.5s forwards ease 0.5s;

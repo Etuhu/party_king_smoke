@@ -1,5 +1,4 @@
 .top-offer {
-	// padding-top: 3rem;
 	> .container,
 	> .container > .row {
 		height: 100%;
@@ -23,7 +22,7 @@
             > span {
                 display: inline-block;
                 opacity: 0;
-                transition: 0.3s ease;
+                // transition: 0.3s ease;
             }
             > span:first-child {
                 transform: translateX(-170px);
@@ -39,7 +38,7 @@
             z-index: 20;
             transform: translate(-100px, 100px);
             opacity: 0;
-            transition: 0.3s ease;
+            // transition: 0.3s ease;
         }
         .top-offer-text {
             position: relative;
@@ -58,6 +57,7 @@
                 height: 100%;
                 z-index: 15;
                 background-color: #F9F9F3;
+                transform: translateX(0);
             }
             h3 {
                 font-weight: 100;
@@ -169,46 +169,67 @@
 		}
 	}
 }
-.section.top-offer.fp-completely.active {
+
+
+.section.top-offer.animated {
 	.top-offer-wrapper {
 		.top-offer-title {
-            > span {
-                opacity: 1;
-                transition: 0.3s ease 0.2s;
-            }
+            // > span {
+                // opacity: 1;
+                // transition: 0.3s ease 0.2s;
+                // animation: fade 0.3s forwards ease 0.2s;
+                // animation-delay: 0.9s;
+            // }
             > span:first-child {
-                transform: translateX(0);
+                // transform: translateX(0);
+                animation: fadeTextToRight170p 0.3s forwards ease 0.2s;
+                animation-delay: 0.9s;
             }
             > span:nth-child(2) {
-                transform: translateX(0);
+                // transform: translateX(0);
+                animation: fadeTextToLeft150p 0.3s forwards ease 0.2s;
+                animation-delay: 0.9s;
             }
         }
         .top-offer-pic {
-            transform: translate(0, 0);
-            opacity: 1;
-            transition: 0.5s ease 0.5s;
+            // transform: translate(0, 0);
+            // opacity: 1;
+            // transition: 0.5s ease 0.5s;
+
+            animation: fadeDiagToTopRight100p 0.5s forwards ease 0.5s;
+            animation-delay: 1.2s;
         }
         .top-offer-text {
             &::after {
-                transform: translateX(100%);
-                transition: 1s ease 1s;
+                // transform: translateX(100%);
+                // transition: 1s ease 1s;
+
+                animation: slideToRightReverse 1s forwards ease 1s;
+                animation-delay: 1.7s;
             }
         }
         .top-offer-text .price-link {
-            transition: z-index 0.1s ease 1s;
-            z-index: 25;
+            // transition: z-index 0.1s ease 1s;
+            // z-index: 25;
+
+            animation: zindexUp 0.1s forwards ease 1s;
+            animation-delay: 1.7s;
         }
     }
 	.special-offer-wrapper {
-        &::after,
         &::before {
-            transition: 1s ease 1s;
-        }
-        &::before {
-            transform: translateY(-110%);
+            // transition: 1s ease 1s;
+            // transform: translateY(-110%);
+
+            animation: slideToTop110p 1s forwards ease 1s;
+            animation-delay: 1.7s;
         }
         &::after {
-            transform: translateY(110%);
+            // transition: 1s ease 1s;
+            // transform: translateY(110%);
+
+            animation: slideToBottom110p 1s forwards ease 1s;
+            animation-delay: 1.7s;
         }
     }
 }

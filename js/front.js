@@ -145,6 +145,15 @@ const fullPage = new fullpage("#fullpage", {
 			mouseMoveToTop();
 		}
 	},
+	afterLoad: function(origin, destination, direction, trigger){
+		var origin = this;
+
+		// if(origin.index == 0){
+			if (origin.item.classList.value.indexOf("animated") == -1) {
+				origin.item.classList.value += " animated";
+			}
+		// }
+	},
 });
 
 
