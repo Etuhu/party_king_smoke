@@ -80,6 +80,7 @@
 		.fill {
 			position: relative;
 			z-index: 5;
+			right: -200px;
 			// background: #F52C5C url("../img/noise.svg");
 			// background-size: cover;
 		}
@@ -87,19 +88,21 @@
 			position: absolute;
 			top: 0;
 			right: 0;
+			right: -200px;
 			z-index: 3;
-			transition: 0.3s ease;
+			transition: box-shadow 0.3s ease;
 			filter: none;
+			opacity: 30%;
 		}
 	}
 	.color-variants-item:hover {
 		.noise {
-			transition: 0.3s ease;
+			transition: box-shadow 0.3s ease;
 			// filter: blur(300px);
 		}
 	}
 	.color-variants-item--red {
-		.fill, .noise {
+		.fill {
 			background-color: #F52C5C;
 		}
 		.noise {
@@ -108,7 +111,7 @@
 		}
 	}
 	.color-variants-item--purple {
-		.fill, .noise {
+		.fill {
 			background-color: #8145FF;
 		}
 		.noise {
@@ -117,7 +120,7 @@
 		}
 	}
 	.color-variants-item--blue {
-		.fill, .noise {
+		.fill {
 			background-color: #15E3FF;
 		}
 		.noise {
@@ -129,7 +132,7 @@
 		}
 	}
 	.color-variants-item--green {
-		.fill, .noise {
+		.fill {
 			background-color: #45FF8F;
 		}
 		.noise {
@@ -141,7 +144,7 @@
 		}
 	}
 	.color-variants-item--yellow {
-		.fill, .noise {
+		.fill {
 			background-color: #E8EB52;
 		}
 		.noise {

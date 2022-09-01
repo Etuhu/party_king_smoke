@@ -68,11 +68,23 @@ window.addEventListener("DOMContentLoaded", function () {
 				{
 					'selector': '#redTitle',
 					'start': 'parent',
-					'end': 5000,
+					'end': 1500,
 					'fn': {
 						'right': {
-							'start': 85,
+							'start': 30,
 							'end': 105,
+							'unit': '%'
+						}
+					}
+				},
+				{
+					'selector': '#redNoise',
+					'start': 'parent',
+					'end': 1500,
+					'fn': {
+						'opacity': {
+							'start': 30,
+							'end': 100,
 							'unit': '%'
 						}
 					}
@@ -80,23 +92,64 @@ window.addEventListener("DOMContentLoaded", function () {
 				{
 					'selector': '#purpleTitle',
 					'start': 'parent',
-					'end': 6000,
+					'end': 1500,
 					'fn': {
 						'left': {
-							'start': 85,
-							'end': 105,
+							'start': 30,
+							'end': 110,
 							'unit': '%'
+						}
+					}
+				},
+				{
+					'selector': '#purpleNoise',
+					'start': 'parent',
+					'end': 1550,
+					'fn': {
+						'opacity': {
+							'start': 30,
+							'end': 100,
+							'unit': '%'
+						},
+						'right': {
+							'start': -200,
+							'end': 0,
+							'unit': 'px'
+						}
+					}
+				},
+				{
+					'selector': '#purpleFill',
+					'start': 'parent',
+					'end': 1550,
+					'fn': {
+						'right': {
+							'start': -200,
+							'end': 0,
+							'unit': 'px'
 						}
 					}
 				},
 				{
 					'selector': '#blueTitle',
 					'start': 'parent',
-					'end': 7000,
+					'end': 1550,
 					'fn': {
 						'right': {
-							'start': 80,
-							'end': 140,
+							'start': -50,
+							'end': 120,
+							'unit': '%'
+						}
+					}
+				},
+				{
+					'selector': '#blueNoise',
+					'start': 'parent',
+					'end': 1500,
+					'fn': {
+						'opacity': {
+							'start': 30,
+							'end': 100,
 							'unit': '%'
 						}
 					}
@@ -104,11 +157,23 @@ window.addEventListener("DOMContentLoaded", function () {
 				{
 					'selector': '#greenTitle',
 					'start': 'parent',
-					'end': 8000,
+					'end': 1700,
 					'fn': {
 						'left': {
-							'start': 85,
-							'end': 145,
+							'start': 30,
+							'end': 120,
+							'unit': '%'
+						}
+					}
+				},
+				{
+					'selector': '#greenNoise',
+					'start': 'parent',
+					'end': 1750,
+					'fn': {
+						'opacity': {
+							'start': 30,
+							'end': 100,
 							'unit': '%'
 						}
 					}
@@ -116,11 +181,23 @@ window.addEventListener("DOMContentLoaded", function () {
 				{
 					'selector': '#yellowTitle',
 					'start': 'parent',
-					'end': 9000,
+					'end': 1800,
 					'fn': {
 						'right': {
-							'start': 70,
-							'end': 155,
+							'start': 20,
+							'end': 115,
+							'unit': '%'
+						}
+					}
+				},
+				{
+					'selector': '#yellowNoise',
+					'start': 'parent',
+					'end': 1850,
+					'fn': {
+						'opacity': {
+							'start': 30,
+							'end': 100,
 							'unit': '%'
 						}
 					}

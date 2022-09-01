@@ -1416,31 +1416,34 @@ a {
 .color-variants .color-variants-item .fill {
   position: relative;
   z-index: 5;
+  right: -200px;
 }
 .color-variants .color-variants-item .noise {
   position: absolute;
   top: 0;
   right: 0;
+  right: -200px;
   z-index: 3;
-  transition: 0.3s ease;
+  transition: box-shadow 0.3s ease;
   filter: none;
+  opacity: 30%;
 }
 .color-variants .color-variants-item:hover .noise {
-  transition: 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
-.color-variants .color-variants-item--red .fill, .color-variants .color-variants-item--red .noise {
+.color-variants .color-variants-item--red .fill {
   background-color: #F52C5C;
 }
 .color-variants .color-variants-item--red .noise {
   box-shadow: 0 0 500px #f52c5c;
 }
-.color-variants .color-variants-item--purple .fill, .color-variants .color-variants-item--purple .noise {
+.color-variants .color-variants-item--purple .fill {
   background-color: #8145FF;
 }
 .color-variants .color-variants-item--purple .noise {
   box-shadow: 0 0 500px #8145FF;
 }
-.color-variants .color-variants-item--blue .fill, .color-variants .color-variants-item--blue .noise {
+.color-variants .color-variants-item--blue .fill {
   background-color: #15E3FF;
 }
 .color-variants .color-variants-item--blue .noise {
@@ -1449,7 +1452,7 @@ a {
 .color-variants .color-variants-item--blue .text-container {
   color: black;
 }
-.color-variants .color-variants-item--green .fill, .color-variants .color-variants-item--green .noise {
+.color-variants .color-variants-item--green .fill {
   background-color: #45FF8F;
 }
 .color-variants .color-variants-item--green .noise {
@@ -1458,7 +1461,7 @@ a {
 .color-variants .color-variants-item--green .text-container {
   color: black;
 }
-.color-variants .color-variants-item--yellow .fill, .color-variants .color-variants-item--yellow .noise {
+.color-variants .color-variants-item--yellow .fill {
   background-color: #E8EB52;
 }
 .color-variants .color-variants-item--yellow .noise {
