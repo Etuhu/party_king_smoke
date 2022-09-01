@@ -617,6 +617,69 @@ a {
   background-color: #737373;
 }
 
+.top-scroll-button {
+  width: 35px;
+  height: 35px;
+  right: 45px;
+  bottom: 75px;
+  position: fixed;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: unset;
+  border-radius: 50%;
+  bottom: 35px;
+  background-color: #F9F9F3;
+  padding: 0;
+  opacity: 0;
+  z-index: -1;
+  transform: translateY(20px);
+  transition: 0.3s ease;
+}
+@media (max-width: 1700px) {
+  .top-scroll-button {
+    right: 55px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 1599px) {
+  .top-scroll-button {
+    background-size: 50%;
+  }
+}
+@media (max-width: 1399px) {
+  .top-scroll-button {
+    right: 55px;
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 1199px) {
+  .top-scroll-button {
+    right: 35px;
+    bottom: 75px;
+  }
+}
+@media (max-width: 767px) {
+  .top-scroll-button {
+    right: 25px;
+    bottom: 20px;
+  }
+}
+
+.top-scroll-button.show {
+  opacity: 0.5;
+  z-index: 1500;
+  visibility: visible;
+  transform: translateY(0);
+  transition: 0.3s ease;
+}
+.top-scroll-button.show:hover {
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
 @keyframes slideToLeft {
   0% {
     transform: translateX(100%);

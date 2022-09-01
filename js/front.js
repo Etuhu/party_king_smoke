@@ -140,20 +140,22 @@ const fullPage = new fullpage("#fullpage", {
 	// },
 	onLeave: function(origin, destination, direction, trigger){
 		// var origin = this;
-		if (direction =='down') {
-			addAnimatedClass(destination);
-		}
+		addAnimatedClass(destination);
 
 		if (destination.isFirst) {
 			showHeader();
 			if (!header.classList.contains("fixed-visible")) {
 				header.classList.add("fixed-visible");
 			}
-		}
-
-		else {
+			if (scrollButton.classList.contains("show")) {
+				scrollButton.classList.remove("show");
+			}
+		} else {
 			if (header.classList.contains("fixed-visible")) {
 				header.classList.remove("fixed-visible");
+			}
+			if (!scrollButton.classList.contains("show")) {
+				scrollButton.classList.add("show");
 			}
 			hiddenHeader();
 			mouseMoveToTop();
@@ -164,9 +166,6 @@ const fullPage = new fullpage("#fullpage", {
 		addAnimatedClass(origin);
 	},
 });
-
-
-
 
 //Появление и исчезнование шапки сайта
 let header = document.querySelector(".header");
@@ -194,9 +193,14 @@ function mouseMoveToTop () {
 	});
 };
 
+//Кнопка прокрутки наверх
+var scrollButton = document.getElementById('top-button');
+scrollButton.addEventListener("click", function () {
+	fullpage_api.moveTo(1);
+});
 
 
-
+//Переключение изображения с дымом в зависимости от выбранного цвета
 let refreshSmokeColor = function (sliderName) {
 	var colorSmokes = document.querySelectorAll(".smoke-wrapper-color > img");
 	colorSmokes.forEach((colorSmoke) => {
