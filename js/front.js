@@ -111,25 +111,25 @@ window.addEventListener("DOMContentLoaded", function () {
 							'end': 100,
 							'unit': '%'
 						},
-						'right': {
-							'start': -200,
-							'end': 0,
-							'unit': 'px'
-						}
+						// 'right': {
+						// 	'start': -200,
+						// 	'end': 0,
+						// 	'unit': 'px'
+						// }
 					}
 				},
-				{
-					'selector': '#purpleFill',
-					'start': 'parent',
-					'end': 1550,
-					'fn': {
-						'right': {
-							'start': -200,
-							'end': 0,
-							'unit': 'px'
-						}
-					}
-				},
+				// {
+				// 	'selector': '#purpleFill',
+				// 	'start': 'parent',
+				// 	'end': 1550,
+				// 	'fn': {
+				// 		'right': {
+				// 			'start': -200,
+				// 			'end': 0,
+				// 			'unit': 'px'
+				// 		}
+				// 	}
+				// },
 				{
 					'selector': '#blueTitle',
 					'start': 'parent',

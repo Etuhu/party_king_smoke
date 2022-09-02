@@ -2,14 +2,19 @@
 	background-color: #660606;
 	color: #f9f9f3;
 	transition: 0.3s ease;
-	// z-index: 100;
-	// position: relative;
 	.logo-wrapper {
 		padding-top: 15px;
 		padding-bottom: 15px;
+		padding-right: 0;
+		@media (max-width: 991px) {
+			order: 1;
+		}
 		> a {
+			display: flex;
+    		align-items: center;
 			color: #f9f9f3;
 			transition: 0.3s ease;
+			width: fit-content;
 			&:hover {
 				opacity: 0.7;
 				transition: 0.3s ease;
@@ -20,12 +25,36 @@
 			font-size: 0.8rem;
 			text-transform: uppercase;
 			margin-right: 12px;
+			line-height: 1;
+			@media (max-width: 1920px) {
+				font-size: 0.75rem;
+			}
+			@media (max-width: 1599px) {
+				font-size: 0.7rem;
+			}
+			@media (max-width: 1399px) {
+				font-size: 0.65rem;
+			}
+		}
+		.logo-star {
+			@media (max-width: 1920px) {
+				width: 27px;
+			}
+			@media (max-width: 1599px) {
+				width: 25px;
+			}
+			@media (max-width: 1299px) {
+				width: 20px;
+			}
 		}
 	}
 	.header-menu {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@media (max-width: 991px) {
+			order: 3;
+		}
 		.navbar {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -41,6 +70,10 @@
 			align-items: flex-start;
 			padding-left: 50px;
 			padding-right: 50px;
+			@media (max-width: 1920px) {
+				padding-left: 40px;
+				padding-right: 40px;
+			}
 			.menu-item {
 				a {
 					font-weight: 400;
@@ -60,9 +93,16 @@
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+		padding-left: 0;
+		@media (max-width: 991px) {
+			order: 2;
+		}
 		.header-button {
-			margin-left: 50px;
+			margin-left: 40px;
 			transition: 0.3s ease;
+			@media (max-width: 1920px) {
+				margin-left: 30px;
+			}
 			&:first-child {
 				margin-left: 0;
 			}
@@ -70,6 +110,58 @@
 				opacity: 0.7;
 				transition: 0.3s ease;
 			}
+		}
+		.header-button--user {
+			img {
+				@media (max-width: 1920px) {
+					width: 26px;
+				}
+				@media (max-width: 1599px) {
+					width: 24px;
+				}
+				@media (max-width: 1299px) {
+					width: 22px;
+				}
+			}
+		}
+		.header-button--cart {
+			img {
+				@media (max-width: 1920px) {
+					width: 24px;
+				}
+				@media (max-width: 1599px) {
+					width: 22px;
+				}
+				@media (max-width: 1299px) {
+					width: 20px;
+				}
+			}
+		}
+	}
+	.navbar-toggler {
+		position: relative;
+		border: 2.5px solid #F9F9F3;
+		// border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		margin-left: 40px;
+		@media (max-width: 1920px) {
+			margin-left: 30px;
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+		.navbar-toggler-icon {
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			height: 3px;
+			background-color: #027a3c;
+			border-radius: 1.24px;
+			transition: 0.05s ease;
 		}
 	}
 }
