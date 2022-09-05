@@ -64,145 +64,254 @@ window.addEventListener("DOMContentLoaded", function () {
 				scalarY: 10,
 			});
 			// }
-			$.jScrollability([
-				{
-					'selector': '#redTitle',
-					'start': 'parent',
-					'end': 1500,
-					'fn': {
-						'right': {
-							'start': 30,
-							'end': 105,
-							'unit': '%'
+			if ($(window).width() > 1920) {
+				$.jScrollability([
+					{
+						'selector': '#redTitle',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'right': {
+								'start': 30,
+								'end': 105,
+								'unit': '%'
+							}
 						}
-					}
-				},
-				{
-					'selector': '#redNoise',
-					'start': 'parent',
-					'end': 1500,
-					'fn': {
-						'opacity': {
-							'start': 30,
-							'end': 100,
-							'unit': '%'
+					},
+					{
+						'selector': '#redNoise',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
 						}
-					}
-				},
-				{
-					'selector': '#purpleTitle',
-					'start': 'parent',
-					'end': 1500,
-					'fn': {
-						'left': {
-							'start': 30,
-							'end': 110,
-							'unit': '%'
+					},
+					{
+						'selector': '#purpleTitle',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'left': {
+								'start': 30,
+								'end': 110,
+								'unit': '%'
+							}
 						}
-					}
-				},
-				{
-					'selector': '#purpleNoise',
-					'start': 'parent',
-					'end': 1550,
-					'fn': {
-						'opacity': {
-							'start': 30,
-							'end': 100,
-							'unit': '%'
-						},
-						// 'right': {
-						// 	'start': -200,
-						// 	'end': 0,
-						// 	'unit': 'px'
-						// }
-					}
-				},
-				// {
-				// 	'selector': '#purpleFill',
-				// 	'start': 'parent',
-				// 	'end': 1550,
-				// 	'fn': {
-				// 		'right': {
-				// 			'start': -200,
-				// 			'end': 0,
-				// 			'unit': 'px'
-				// 		}
-				// 	}
-				// },
-				{
-					'selector': '#blueTitle',
-					'start': 'parent',
-					'end': 1550,
-					'fn': {
-						'right': {
-							'start': -50,
-							'end': 120,
-							'unit': '%'
+					},
+					{
+						'selector': '#purpleNoise',
+						'start': 'parent',
+						'end': 1550,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							},
 						}
-					}
-				},
-				{
-					'selector': '#blueNoise',
-					'start': 'parent',
-					'end': 1500,
-					'fn': {
-						'opacity': {
-							'start': 30,
-							'end': 100,
-							'unit': '%'
+					},
+					{
+						'selector': '#blueTitle',
+						'start': 'parent',
+						'end': 1550,
+						'fn': {
+							'right': {
+								'start': -50,
+								'end': 120,
+								'unit': '%'
+							}
 						}
-					}
-				},
-				{
-					'selector': '#greenTitle',
-					'start': 'parent',
-					'end': 1700,
-					'fn': {
-						'left': {
-							'start': 30,
-							'end': 120,
-							'unit': '%'
+					},
+					{
+						'selector': '#blueNoise',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
 						}
-					}
-				},
-				{
-					'selector': '#greenNoise',
-					'start': 'parent',
-					'end': 1750,
-					'fn': {
-						'opacity': {
-							'start': 30,
-							'end': 100,
-							'unit': '%'
+					},
+					{
+						'selector': '#greenTitle',
+						'start': 'parent',
+						'end': 1700,
+						'fn': {
+							'left': {
+								'start': 30,
+								'end': 120,
+								'unit': '%'
+							}
 						}
-					}
-				},
-				{
-					'selector': '#yellowTitle',
-					'start': 'parent',
-					'end': 1800,
-					'fn': {
-						'right': {
-							'start': 20,
-							'end': 115,
-							'unit': '%'
+					},
+					{
+						'selector': '#greenNoise',
+						'start': 'parent',
+						'end': 1750,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
 						}
-					}
-				},
-				{
-					'selector': '#yellowNoise',
-					'start': 'parent',
-					'end': 1850,
-					'fn': {
-						'opacity': {
-							'start': 30,
-							'end': 100,
-							'unit': '%'
+					},
+					{
+						'selector': '#yellowTitle',
+						'start': 'parent',
+						'end': 1800,
+						'fn': {
+							'right': {
+								'start': 20,
+								'end': 115,
+								'unit': '%'
+							}
 						}
-					}
-				},
-			]);
+					},
+					{
+						'selector': '#yellowNoise',
+						'start': 'parent',
+						'end': 1850,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
+						}
+					},
+				]);
+			}
+			if (($(window).width() > 1599) && ($(window).width() < 1921)) {
+				$.jScrollability([
+					{
+						'selector': '#redTitle',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'right': {
+								'start': 30,
+								'end': 105,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#redNoise',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#purpleTitle',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'left': {
+								'start': 30,
+								'end': 110,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#purpleNoise',
+						'start': 'parent',
+						'end': 1550,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							},
+						}
+					},
+					{
+						'selector': '#blueTitle',
+						'start': 'parent',
+						'end': 1550,
+						'fn': {
+							'right': {
+								'start': -50,
+								'end': 120,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#blueNoise',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#greenTitle',
+						'start': 'parent',
+						'end': 1700,
+						'fn': {
+							'left': {
+								'start': 30,
+								'end': 120,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#greenNoise',
+						'start': 'parent',
+						'end': 1750,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#yellowTitle',
+						'start': 'parent',
+						'end': 1800,
+						'fn': {
+							'right': {
+								'start': 20,
+								'end': 115,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#yellowNoise',
+						'start': 'parent',
+						'end': 1850,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
+						}
+					},
+				]);
+			}
 		},
 		onLeave: function(origin, destination, direction, trigger){
 			addAnimatedClass(destination);
@@ -304,31 +413,20 @@ window.addEventListener("DOMContentLoaded", function () {
 			},
 		},
 		breakpoints: {
-			1600: {
-				slidesPerView: 5,
-				slidesPerGroup: 1,
-			},
 			1300: {
 				slidesPerView: 5,
 				slidesPerGroup: 1,
+				loop: true,
 			},
-			1100: {
-				slidesPerView: 4,
-				slidesPerGroup: 1,
-			},
-			992: {
-				slidesPerView: 4,
-				slidesPerGroup: 1,
-			},
-			768: {
+			576: {
 				slidesPerView: 3,
 				slidesPerGroup: 1,
+				loop: false,
 			},
-
 			0: {
-				spaceBetween: 5,
-				slidesPerView: 2,
+				slidesPerView: 1,
 				slidesPerGroup: 1,
+				loop: false,
 			},
 		},
 		on: {
