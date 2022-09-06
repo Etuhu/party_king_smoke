@@ -188,7 +188,255 @@ window.addEventListener("DOMContentLoaded", function () {
 					},
 				]);
 			}
-			if (($(window).width() > 1599) && ($(window).width() < 1921)) {
+			if (($(window).width() > 1499) && ($(window).width() < 1921)) {
+				$.jScrollability([
+					{
+						'selector': '#redTitle',
+						'start': 'parent',
+						'end': 1300,
+						'fn': {
+							'right': {
+								'start': 25,
+								'end': 115,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#redNoise',
+						'start': 'parent',
+						'end': 1300,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#purpleTitle',
+						'start': 'parent',
+						'end': 1300,
+						'fn': {
+							'left': {
+								'start': 25,
+								'end': 125,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#purpleNoise',
+						'start': 'parent',
+						'end': 1300,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							},
+						}
+					},
+					{
+						'selector': '#blueTitle',
+						'start': 'parent',
+						'end': 1450,
+						'fn': {
+							'right': {
+								'start': 25,
+								'end': 130,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#blueNoise',
+						'start': 'parent',
+						'end': 1450,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 150,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#greenTitle',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'left': {
+								'start': 25,
+								'end': 140,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#greenNoise',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#yellowTitle',
+						'start': 'parent',
+						'end': 1600,
+						'fn': {
+							'right': {
+								'start': 25,
+								'end': 120,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#yellowNoise',
+						'start': 'parent',
+						'end': 1600,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
+						}
+					},
+				]);
+			}
+			if (($(window).width() > 1199) && ($(window).width() < 1500)) {
+				$.jScrollability([
+					{
+						'selector': '#redTitle',
+						'start': 'parent',
+						'end': 1300,
+						'fn': {
+							'right': {
+								'start': 25,
+								'end': 110,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#redNoise',
+						'start': 'parent',
+						'end': 1300,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#purpleTitle',
+						'start': 'parent',
+						'end': 1300,
+						'fn': {
+							'left': {
+								'start': 10,
+								'end': 115,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#purpleNoise',
+						'start': 'parent',
+						'end': 1300,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							},
+						}
+					},
+					{
+						'selector': '#blueTitle',
+						'start': 'parent',
+						'end': 1450,
+						'fn': {
+							'right': {
+								'start': 25,
+								'end': 115,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#blueNoise',
+						'start': 'parent',
+						'end': 1450,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 150,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#greenTitle',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'left': {
+								'start': 25,
+								'end': 125,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#greenNoise',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#yellowTitle',
+						'start': 'parent',
+						'end': 1600,
+						'fn': {
+							'right': {
+								'start': 25,
+								'end': 125,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#yellowNoise',
+						'start': 'parent',
+						'end': 1600,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 100,
+								'unit': '%'
+							}
+						}
+					},
+				]);
+			}
+			if (($(window).width() > 991) && ($(window).width() < 1200)) {
 				$.jScrollability([
 					{
 						'selector': '#redTitle',
@@ -220,8 +468,8 @@ window.addEventListener("DOMContentLoaded", function () {
 						'end': 1300,
 						'fn': {
 							'left': {
-								'start': 25,
-								'end': 110,
+								'start': -60,
+								'end': 100,
 								'unit': '%'
 							}
 						}
@@ -245,7 +493,7 @@ window.addEventListener("DOMContentLoaded", function () {
 						'fn': {
 							'right': {
 								'start': 25,
-								'end': 110,
+								'end': 100,
 								'unit': '%'
 							}
 						}
@@ -269,7 +517,7 @@ window.addEventListener("DOMContentLoaded", function () {
 						'fn': {
 							'left': {
 								'start': 25,
-								'end': 120,
+								'end': 105,
 								'unit': '%'
 							}
 						}
@@ -312,6 +560,502 @@ window.addEventListener("DOMContentLoaded", function () {
 					},
 				]);
 			}
+			// if (($(window).width() > 767) && ($(window).width() < 992)) {
+			// 	$.jScrollability([
+			// 		{
+			// 			'selector': '#redTitle',
+			// 			'start': 'parent',
+			// 			'end': 900,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': 25,
+			// 					'end': 105,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#redNoise',
+			// 			'start': 'parent',
+			// 			'end': 900,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#purpleTitle',
+			// 			'start': 'parent',
+			// 			'end': 950,
+			// 			'fn': {
+			// 				'left': {
+			// 					'start': -160,
+			// 					'end': 140,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#purpleNoise',
+			// 			'start': 'parent',
+			// 			'end': 950,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				},
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#blueTitle',
+			// 			'start': 'parent',
+			// 			'end': 1000,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': 25,
+			// 					'end': 125,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#blueNoise',
+			// 			'start': 'parent',
+			// 			'end': 1000,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 150,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#greenTitle',
+			// 			'start': 'parent',
+			// 			'end': 1050,
+			// 			'fn': {
+			// 				'left': {
+			// 					'start': 25,
+			// 					'end': 130,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#greenNoise',
+			// 			'start': 'parent',
+			// 			'end': 1050,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#yellowTitle',
+			// 			'start': 'parent',
+			// 			'end': 1100,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': 25,
+			// 					'end': 135,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#yellowNoise',
+			// 			'start': 'parent',
+			// 			'end': 1100,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 	]);
+			// }
+			// if (($(window).width() > 649) && ($(window).width() < 768)) {
+			// 	$.jScrollability([
+			// 		{
+			// 			'selector': '#redTitle',
+			// 			'start': 'parent',
+			// 			'end': 800,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': 25,
+			// 					'end': 105,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#redNoise',
+			// 			'start': 'parent',
+			// 			'end': 800,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#purpleTitle',
+			// 			'start': 'parent',
+			// 			'end': 850,
+			// 			'fn': {
+			// 				'left': {
+			// 					'start': -250,
+			// 					'end': 135,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#purpleNoise',
+			// 			'start': 'parent',
+			// 			'end': 850,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				},
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#blueTitle',
+			// 			'start': 'parent',
+			// 			'end': 850,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': 0,
+			// 					'end': 108,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#blueNoise',
+			// 			'start': 'parent',
+			// 			'end': 850,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 150,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#greenTitle',
+			// 			'start': 'parent',
+			// 			'end': 900,
+			// 			'fn': {
+			// 				'left': {
+			// 					'start': 25,
+			// 					'end': 115,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#greenNoise',
+			// 			'start': 'parent',
+			// 			'end': 900,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#yellowTitle',
+			// 			'start': 'parent',
+			// 			'end': 950,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': 25,
+			// 					'end': 120,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#yellowNoise',
+			// 			'start': 'parent',
+			// 			'end': 950,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 	]);
+			// }
+			// if (($(window).width() > 499) && ($(window).width() < 650)) {
+			// 	$.jScrollability([
+			// 		{
+			// 			'selector': '#redTitle',
+			// 			'start': 'parent',
+			// 			'end': 600,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': 25,
+			// 					'end': 80,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#redNoise',
+			// 			'start': 'parent',
+			// 			'end': 600,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 80,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#purpleTitle',
+			// 			'start': 'parent',
+			// 			'end': 650,
+			// 			'fn': {
+			// 				'left': {
+			// 					'start': -250,
+			// 					'end': 120,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#purpleNoise',
+			// 			'start': 'parent',
+			// 			'end': 650,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				},
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#blueTitle',
+			// 			'start': 'parent',
+			// 			'end': 650,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': 0,
+			// 					'end': 85,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#blueNoise',
+			// 			'start': 'parent',
+			// 			'end': 650,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 150,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#greenTitle',
+			// 			'start': 'parent',
+			// 			'end': 700,
+			// 			'fn': {
+			// 				'left': {
+			// 					'start': -25,
+			// 					'end': 110,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#greenNoise',
+			// 			'start': 'parent',
+			// 			'end': 700,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#yellowTitle',
+			// 			'start': 'parent',
+			// 			'end': 750,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': -30,
+			// 					'end': 115,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#yellowNoise',
+			// 			'start': 'parent',
+			// 			'end': 750,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 	]);
+			// }
+			// if (($(window).width() > 300) && ($(window).width() < 500)) {
+			// 	$.jScrollability([
+			// 		{
+			// 			'selector': '#redTitle',
+			// 			'start': 'parent',
+			// 			'end': 600,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': 25,
+			// 					'end': 80,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#redNoise',
+			// 			'start': 'parent',
+			// 			'end': 600,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 80,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#purpleTitle',
+			// 			'start': 'parent',
+			// 			'end': 650,
+			// 			'fn': {
+			// 				'left': {
+			// 					'start': -250,
+			// 					'end': 105,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#purpleNoise',
+			// 			'start': 'parent',
+			// 			'end': 650,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				},
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#blueTitle',
+			// 			'start': 'parent',
+			// 			'end': 650,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': -20,
+			// 					'end': 75,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#blueNoise',
+			// 			'start': 'parent',
+			// 			'end': 650,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 150,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#greenTitle',
+			// 			'start': 'parent',
+			// 			'end': 700,
+			// 			'fn': {
+			// 				'left': {
+			// 					'start': -25,
+			// 					'end': 90,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#greenNoise',
+			// 			'start': 'parent',
+			// 			'end': 700,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#yellowTitle',
+			// 			'start': 'parent',
+			// 			'end': 750,
+			// 			'fn': {
+			// 				'right': {
+			// 					'start': -30,
+			// 					'end': 115,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 		{
+			// 			'selector': '#yellowNoise',
+			// 			'start': 'parent',
+			// 			'end': 750,
+			// 			'fn': {
+			// 				'opacity': {
+			// 					'start': 30,
+			// 					'end': 100,
+			// 					'unit': '%'
+			// 				}
+			// 			}
+			// 		},
+			// 	]);
+			// }
 		},
 		onLeave: function(origin, destination, direction, trigger){
 			addAnimatedClass(destination);
