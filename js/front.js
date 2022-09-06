@@ -193,10 +193,10 @@ window.addEventListener("DOMContentLoaded", function () {
 					{
 						'selector': '#redTitle',
 						'start': 'parent',
-						'end': 1500,
+						'end': 1300,
 						'fn': {
 							'right': {
-								'start': 30,
+								'start': 25,
 								'end': 105,
 								'unit': '%'
 							}
@@ -205,7 +205,7 @@ window.addEventListener("DOMContentLoaded", function () {
 					{
 						'selector': '#redNoise',
 						'start': 'parent',
-						'end': 1500,
+						'end': 1300,
 						'fn': {
 							'opacity': {
 								'start': 30,
@@ -217,10 +217,10 @@ window.addEventListener("DOMContentLoaded", function () {
 					{
 						'selector': '#purpleTitle',
 						'start': 'parent',
-						'end': 1500,
+						'end': 1300,
 						'fn': {
 							'left': {
-								'start': 30,
+								'start': 25,
 								'end': 110,
 								'unit': '%'
 							}
@@ -229,7 +229,7 @@ window.addEventListener("DOMContentLoaded", function () {
 					{
 						'selector': '#purpleNoise',
 						'start': 'parent',
-						'end': 1550,
+						'end': 1300,
 						'fn': {
 							'opacity': {
 								'start': 30,
@@ -241,17 +241,41 @@ window.addEventListener("DOMContentLoaded", function () {
 					{
 						'selector': '#blueTitle',
 						'start': 'parent',
-						'end': 1550,
+						'end': 1450,
 						'fn': {
 							'right': {
-								'start': -50,
-								'end': 120,
+								'start': 25,
+								'end': 110,
 								'unit': '%'
 							}
 						}
 					},
 					{
 						'selector': '#blueNoise',
+						'start': 'parent',
+						'end': 1450,
+						'fn': {
+							'opacity': {
+								'start': 30,
+								'end': 150,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#greenTitle',
+						'start': 'parent',
+						'end': 1500,
+						'fn': {
+							'left': {
+								'start': 25,
+								'end': 120,
+								'unit': '%'
+							}
+						}
+					},
+					{
+						'selector': '#greenNoise',
 						'start': 'parent',
 						'end': 1500,
 						'fn': {
@@ -263,37 +287,13 @@ window.addEventListener("DOMContentLoaded", function () {
 						}
 					},
 					{
-						'selector': '#greenTitle',
-						'start': 'parent',
-						'end': 1700,
-						'fn': {
-							'left': {
-								'start': 30,
-								'end': 120,
-								'unit': '%'
-							}
-						}
-					},
-					{
-						'selector': '#greenNoise',
-						'start': 'parent',
-						'end': 1750,
-						'fn': {
-							'opacity': {
-								'start': 30,
-								'end': 100,
-								'unit': '%'
-							}
-						}
-					},
-					{
 						'selector': '#yellowTitle',
 						'start': 'parent',
-						'end': 1800,
+						'end': 1600,
 						'fn': {
 							'right': {
-								'start': 20,
-								'end': 115,
+								'start': 25,
+								'end': 110,
 								'unit': '%'
 							}
 						}
@@ -301,7 +301,7 @@ window.addEventListener("DOMContentLoaded", function () {
 					{
 						'selector': '#yellowNoise',
 						'start': 'parent',
-						'end': 1850,
+						'end': 1600,
 						'fn': {
 							'opacity': {
 								'start': 30,
