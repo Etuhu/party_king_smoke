@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		// responsiveWidth: 992,
 		// responsiveHeight: 0,
 		lazyLoading: true,
-		recordHistory: true,
+		// recordHistory: true,
 		observer: true,
 		credits: { enabled: false, label: "Made with fullPage.js", position: "right" },
 		afterRender: function(){
