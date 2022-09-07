@@ -1,0 +1,9 @@
+.last-section {
+    display: flex;
+    flex-direction: column;
+    .catalog-list {
+        @media (max-width: 575px) {
+            margin-bottom: 20px;
+        }
+    }
+}

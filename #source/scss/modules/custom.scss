@@ -249,3 +249,8 @@ a {
 	  transition: 0.3s ease;
     }
   }
+
+  .fp-scroll-mac .fp-overflow::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 3px;
+  }

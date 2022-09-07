@@ -63,6 +63,9 @@
 			font-size: 14rem;
 			margin-top: 6rem;
 		}
+		@media (max-height: 800px) {
+			margin-top: 4rem;
+		}
 		@media (max-width: 767px) {
 			font-size: 12rem;
 		}
@@ -111,7 +114,7 @@
 			margin-left: 50px;
 			top: 280px !important;
 			@media (max-height: 850px) {
-				top: 250px !important;
+				top: 230px !important;
 			}
 		}
 		@media (max-width: 399px) {
@@ -145,7 +148,7 @@
 		@media (max-width: 575px) {
 			top: 500px !important;
 			@media (max-height: 850px) {
-				top: 370px !important;
+				top: 330px !important;
 			}
 		}
 		.features-item {
@@ -177,7 +180,7 @@
 				font-size: 1.6rem;
 			}
 			@media (max-width: 575px) {
-				font-size: 1.4rem;
+				font-size: 1.2rem;
 			}
 		}
 	}

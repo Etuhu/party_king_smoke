@@ -1,8 +1,14 @@
 .top-offer {
+    padding-top: 2rem;
 	> .container,
 	> .container > .row {
 		height: 100%;
 	}
+	> .container > .row {
+        @media (max-width: 991px) {
+
+        }
+    }
 	.top-offer-content {
 		display: flex;
 		flex-direction: column;
@@ -19,10 +25,29 @@
 			color: rgba(30, 30, 28, 0.7);
 			text-align: right;
             margin-bottom: 3rem;
+            @media (max-width: 1899px) {
+                font-size: 4.5rem;
+            }
+            @media (max-width: 1599px) {
+                font-size: 4rem;
+            }
+            @media (max-width: 991px) {
+                font-size: 3.5rem;
+                margin-bottom: 0;
+            }
+            @media (max-width: 575px) {
+                font-size: 3.2rem;
+            }
+            @media (max-width: 449px) {
+                font-size: 3rem;
+            }
+            @media (max-width: 399px) {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
             > span {
                 display: inline-block;
                 opacity: 0;
-                // transition: 0.3s ease;
             }
             > span:first-child {
                 transform: translateX(-170px);
@@ -38,16 +63,61 @@
             z-index: 20;
             transform: translate(-100px, 100px);
             opacity: 0;
-            // transition: 0.3s ease;
+            @media (max-width: 1599px) {
+                top: 3rem;
+            }
+            @media (max-width: 991px) {
+                position: unset;
+            }
+            > img {
+                @media (max-width: 1920px), (min-width: 1921px) and (max-height: 1080px) {
+                    width: 950px;
+                }
+                @media (max-width: 1899px) {
+                    width: 900px;
+                }
+                @media (max-width: 1799px) {
+                    width: 850px;
+                }
+                @media (max-width: 1599px) {
+                    width: 800px;
+                }
+                @media (max-width: 1499px) {
+                    width: 750px;
+                }
+                @media (max-width: 1399px) {
+                    width: 800px;
+                }
+                @media (max-width: 1299px) {
+                    width: 750px;
+                }
+                @media (max-width: 1199px) {
+                    width: 700px;
+                }
+                @media (max-width: 575px) {
+                    width: 130%;
+                }
+            }
         }
         .top-offer-text {
             position: relative;
             display: block;
             font-weight: 100;
-            font-size: 18px;
-            line-height: 26px;
+            font-size: 0.75rem;
+            line-height: 1.44;
             padding-bottom: 2rem;
             overflow: hidden;
+            @media (max-width: 991px) {
+                margin-top: -8rem;
+            }
+            @media (max-width: 575px) {
+                margin-top: -5rem;
+            }
+            @media (max-width: 399px) {
+                flex: 0 0 auto;
+                width: 60%;
+                margin-left: 40%;
+            }
             &::after {
                 content: "";
                 position: absolute;
@@ -64,6 +134,18 @@
                 font-size: 2.7rem;
                 line-height: 1;
                 margin-bottom: 1rem;
+                @media (max-width: 1899px) {
+                    font-size: 2.5rem;
+                }
+                @media (max-width: 1599px) {
+                    font-size: 2.2rem;
+                }
+                @media (max-width: 767px) {
+                    font-size: 2rem;
+                }
+                @media (max-width: 575px) {
+                    margin-bottom: 0.8rem;
+                }
             }
             p:last-child {
                 margin-bottom: 0;
@@ -72,10 +154,16 @@
                 font-weight: 100;
                 font-size: 0.75rem;
                 line-height: 1.5;
+                @media (max-width: 575px) {
+                    margin-bottom: 0.5rem;
+                }
                 .price-value {
                     display: inline-block;
                     font-weight: 500;
                     margin-top: 10px;
+                    @media (max-width: 575px) {
+                        margin-top: 5px;
+                    }
                 }
             }
             .price-link {
@@ -100,6 +188,18 @@
 		justify-content: center;
         z-index: 5;
         overflow: hidden;
+        @media (max-width: 1199px) {
+            min-height: 250px;
+            height: 25%;
+        }
+        @media (max-width: 767px) {
+            min-height: 200px;
+            height: 20%;
+        }
+        @media (max-width: 575px) {
+            min-height: 150px;
+            height: 15%;
+        }
         &::after,
         &::before {
             content: "";
@@ -130,6 +230,9 @@
 			&:hover ~ .container .special-offer-title-wrapper {
 				transform: scale(1.1);
 				transition: 0.7s cubic-bezier(0, 0, 0.05, 1);
+                @media (max-width: 575px) {
+                    transform: scale(1);
+                }
 			}
 		}
 		.special-offer-title-wrapper {
@@ -139,6 +242,23 @@
 				font-size: 5rem;
 				line-height: 1;
 				margin-bottom: 1.7rem;
+                @media (max-width: 1199px) {
+                    font-size: 4.5rem;
+                }
+                @media (max-width: 767px) {
+                    font-size: 4rem;
+                    margin-bottom: 1.5rem;
+                }
+                @media (max-width: 575px) {
+                    font-size: 3.5rem;
+                }
+                @media (max-width: 449px) {
+                    font-size: 3.2rem;
+                }
+                @media (max-width: 399px) {
+                    font-size: 2.8rem;
+                    margin-bottom: 1rem;
+                }
 			}
 			.special-offer-subtitle {
 				font-weight: 700;
@@ -146,6 +266,18 @@
 				line-height: 1;
 				letter-spacing: 0.27em;
 				text-transform: uppercase;
+                @media (max-width: 1199px) {
+                    font-size: 1.8rem;
+                }
+                @media (max-width: 767px) {
+                    font-size: 1.7rem;
+                }
+                @media (max-width: 449px) {
+                    font-size: 1.5rem;
+                }
+                @media (max-width: 399px) {
+                    font-size: 1.2rem;
+                }
 			}
 		}
 		.special-offer-bg {
@@ -174,60 +306,36 @@
 .section.top-offer.animated {
 	.top-offer-wrapper {
 		.top-offer-title {
-            // > span {
-                // opacity: 1;
-                // transition: 0.3s ease 0.2s;
-                // animation: fade 0.3s forwards ease 0.2s;
-                // animation-delay: 0.9s;
-            // }
             > span:first-child {
-                // transform: translateX(0);
                 animation: fadeTextToRight170p 0.3s forwards ease 0.2s;
                 animation-delay: 0.9s;
             }
             > span:nth-child(2) {
-                // transform: translateX(0);
                 animation: fadeTextToLeft150p 0.3s forwards ease 0.2s;
                 animation-delay: 0.9s;
             }
         }
         .top-offer-pic {
-            // transform: translate(0, 0);
-            // opacity: 1;
-            // transition: 0.5s ease 0.5s;
-
             animation: fadeDiagToTopRight100p 0.5s forwards ease 0.5s;
             animation-delay: 1.2s;
         }
         .top-offer-text {
             &::after {
-                // transform: translateX(100%);
-                // transition: 1s ease 1s;
-
                 animation: slideToRightReverse 1s forwards ease 1s;
                 animation-delay: 1.7s;
             }
         }
         .top-offer-text .price-link {
-            // transition: z-index 0.1s ease 1s;
-            // z-index: 25;
-
             animation: zindexUp 0.1s forwards ease 1s;
             animation-delay: 1.7s;
         }
     }
 	.special-offer-wrapper {
         &::before {
-            // transition: 1s ease 1s;
-            // transform: translateY(-110%);
-
             animation: slideToTop110p 1s forwards ease 1s;
             animation-delay: 1.7s;
         }
         &::after {
-            // transition: 1s ease 1s;
-            // transform: translateY(110%);
-
             animation: slideToBottom110p 1s forwards ease 1s;
             animation-delay: 1.7s;
         }

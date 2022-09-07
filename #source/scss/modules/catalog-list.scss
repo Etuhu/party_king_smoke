@@ -1,98 +1,195 @@
 .catalog-list {
-    .catalog-list-item {
-        margin-bottom: 2.4rem;
-        &:hover {
-            .content {
-                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-                transition: 0.3s ease;
-            }
+	.catalog-list-item {
+		margin-bottom: 2.4rem;
+        @media (max-width: 991px) {
+            margin-bottom: 1.5rem;
         }
-        .content {
-            display: flex;
-            align-items: flex-start;
-            padding: 20px;
-            background-color: white;
-            border-radius: 20px;
-            transition: 0.3s ease;
-            .pic {
-                width: 45%;
-                max-width: 45%;
-                flex-grow: 1;
-                flex-shrink: 0;
+		&:hover {
+			.content {
+				box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+				transition: 0.3s ease;
+			}
+		}
+		.content {
+			display: flex;
+			align-items: flex-start;
+			padding: 20px;
+			background-color: white;
+			border-radius: 20px;
+			transition: 0.3s ease;
+            @media (max-width: 991px) {
+                padding: 15px;
+                border-radius: 10px;
             }
-            .info {
-                width: 55%;
-                max-width: 55%;
-                flex-grow: 0;
-                flex-shrink: 1;
-                padding-left: 20px;
-                padding-top: 20px;
-                color: $darkgrey;
-                .title {
-                    font-weight: 100;
-                    font-size: 1.5rem;
-                    line-height: 1.5;
+            @media (max-width: 399px) {
+                padding: 10px;
+            }
+			.pic {
+				width: 45%;
+				max-width: 45%;
+				flex-grow: 1;
+				flex-shrink: 0;
+			}
+			.info {
+				width: 55%;
+				max-width: 55%;
+				flex-grow: 0;
+				flex-shrink: 1;
+				padding-left: 20px;
+				padding-top: 20px;
+				color: $darkgrey;
+                @media (max-width: 1499px) {
+                    padding-top: 0;
                 }
-                .subtitle {
-                    font-weight: 100;
-                    font-size: 0.8rem;
-                    line-height: 1.5;
-                    margin-bottom: 15px;
+                @media (max-width: 449px) {
+                    padding-left: 15px;
                 }
-                .price {
-                    font-weight: 400;
-                    font-size: 1rem;
-                    line-height: 2;
-                }
-                .link {
-                    font-weight: 100;
-                    font-size: 0.8rem;
-                    line-height: 1;
-                    color: $red;
-                    &:hover {
-                        text-shadow: 0 0 3px $red;
+				.title {
+					font-weight: 100;
+					font-size: 1.5rem;
+					line-height: 1.5;
+					@media (max-width: 1920px), (min-width: 1921px) and (max-height: 1080px) {
+						font-size: 1.4rem;
+					}
+                    @media (max-width: 1499px) {
+                        margin-bottom: 0;
                     }
-                }
-            }
-        }
-    }
-    .catalog-list-item--promo {
-        .content {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            background-color: unset;
-            border-radius: 0;
-            background-color: #FFE7C4;
-            background-image: url("../img/pink_smoke_promo.png");
-            background-repeat: no-repeat;
-            background-position: center right;
-            border-radius: 20px;
-            .description {
-                width: 50%;
-                max-width: 50%;
-                padding-left: 20px;
-                span {
-                    display: inline-block;
-                    font-weight: 100;
-                    font-size: 2rem;
-                    line-height: 1;
-                    color: #0D0D0D;
-                }
-                .link {
-                    display: inline-block;
-                    margin-top: 20px;
-                    font-weight: 100;
-                    font-size: 1rem;
-                    line-height: 1;
-                    color: $red;
-                    &:hover {
-                        text-shadow: 0 0 3px $red;
+                    @media (max-width: 575px) {
+                        margin-bottom: 0;
+                        font-size: 2.5rem;
                     }
-                }
-            }
+                    @media (max-width: 449px) {
+                        font-size: 1.8rem;
+                    }
+                    @media (max-width: 399px) {
+                        font-size: 1.6rem;
+                    }
+				}
+				.subtitle {
+					font-weight: 100;
+					font-size: 0.8rem;
+					line-height: 1.5;
+					margin-bottom: 15px;
+					@media (max-width: 1920px), (min-width: 1921px) and (max-height: 1080px) {
+						margin-bottom: 10px;
+					}
+                    @media (max-width: 1499px) {
+                        margin-bottom: 5px;
+                    }
+                    @media (max-width: 575px) {
+                        font-size: 1.3rem;
+                    }
+                    @media (max-width: 449px) {
+                        font-size: 1.1rem;
+                    }
+                    @media (max-width: 399px) {
+                        font-size: 1rem;
+                    }
+				}
+				.price {
+					font-weight: 400;
+					font-size: 1rem;
+					line-height: 2;
+                    @media (max-width: 575px) {
+                        font-size: 1.5rem;
+                        margin-bottom: 10px;
+                    }
+                    @media (max-width: 449px) {
+                        font-size: 1.3rem;
+                    }
+                    @media (max-width: 399px) {
+                        font-size: 1.2rem;
+                    }
+				}
+				.link {
+					font-weight: 100;
+					font-size: 0.8rem;
+					line-height: 1;
+					color: $red;
+                    @media (max-width: 575px) {
+                        font-size: 1.3rem;
+                    }
+                    @media (max-width: 399px) {
+                        font-size: 1.2rem;
+                    }
+					&:hover {
+						text-shadow: 0 0 3px $red;
+					}
+				}
+			}
+		}
+	}
+	.catalog-list-item--promo {
+        @media (max-width: 575px) {
+            min-height: 250px;
         }
-    }
+        @media (max-width: 499px) {
+            min-height: 230px;
+        }
+        @media (max-width: 399px) {
+            min-height: 175px;
+        }
+        @media (max-width: 375px) {
+            min-height: 165px;
+        }
+		.content {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			background-color: unset;
+			border-radius: 0;
+			background-color: #ffe7c4;
+			background-image: url("../img/pink_smoke_promo.png");
+			background-repeat: no-repeat;
+			background-position: center right;
+			border-radius: 20px;
+			.description {
+				width: 50%;
+				max-width: 50%;
+				padding-left: 20px;
+                @media (max-width: 575px) {
+                    width: 60%;
+                    max-width: 60%;
+                }
+				span {
+					display: inline-block;
+					font-weight: 100;
+					font-size: 2rem;
+					line-height: 1;
+					color: #0d0d0d;
+					@media (max-width: 1920px), (min-width: 1921px) and (max-height: 1080px) {
+						font-size: 1.8rem;
+					}
+                    @media (max-width: 575px) {
+						font-size: 2.8rem;
+                    }
+                    @media (max-width: 449px) {
+                        font-size: 2.5rem;
+                    }
+                    @media (max-width: 399px) {
+                        font-size: 2.3rem;
+                    }
+				}
+				.link {
+					display: inline-block;
+					margin-top: 20px;
+					font-weight: 100;
+					font-size: 1rem;
+					line-height: 1;
+					color: $red;
+					@media (max-width: 1920px), (min-width: 1921px) and (max-height: 1080px) {
+                        margin-top: 15px;
+					}
+                    @media (max-width: 575px) {
+                        font-size: 1.3rem;
+                    }
+					&:hover {
+						text-shadow: 0 0 3px $red;
+					}
+				}
+			}
+		}
+	}
 }
