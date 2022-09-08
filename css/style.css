@@ -2939,6 +2939,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow: hidden;
 }
 .technology .technology-image .pic {
   position: relative;
@@ -2949,6 +2950,11 @@ a {
   .technology .technology-image .pic {
     margin-bottom: -350px;
     text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .technology .technology-image .pic {
+    margin-bottom: -520px;
   }
 }
 @media (max-height: 800px) {
@@ -2979,6 +2985,11 @@ a {
     transform: translateX(-40%);
   }
 }
+@media (max-width: 991px) {
+  .technology .technology-image .pic .smoke {
+    width: 310px;
+  }
+}
 .technology .technology-image .pic .smoke > img {
   width: 100%;
 }
@@ -2988,7 +2999,7 @@ a {
   transform: translateY(100px);
   opacity: 0;
 }
-@media (max-height: 700px) {
+@media (max-height: 800px) {
   .technology .technology-image .pic .stick {
     height: 500px;
     max-height: 700px;
@@ -2997,6 +3008,7 @@ a {
 }
 @media (max-height: 450px) and (orientation: landscape) {
   .technology .technology-image .pic .stick {
+    height: 300px;
     max-height: 500px;
     overflow: hidden;
   }
@@ -3071,6 +3083,11 @@ a {
     justify-content: center;
   }
 }
+@media (max-height: 500px) and (orientation: landscape) {
+  .power > .container > .row {
+    display: block;
+  }
+}
 .power .top-smoke-wrapper {
   position: absolute;
   top: 0;
@@ -3078,6 +3095,11 @@ a {
   z-index: 10;
   width: 100%;
   height: 100%;
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .power .top-smoke-wrapper {
+    display: none;
+  }
 }
 .power .top-smoke-wrapper > img {
   width: 100%;
