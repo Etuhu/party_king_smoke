@@ -15,6 +15,11 @@
     > .container > .row {
         height: 100%;
     }
+    > .container {
+        @media (min-width: 768px) and (max-width: 991px) {
+            max-width: 100%;
+        }
+    }
     > .container > .row {
         @media (max-width: 767px) {
             display: flex;
@@ -118,13 +123,15 @@
                 z-index: 10;
                 transform: translateY(100px);
                 opacity: 0;
+                @media (max-height: 1024px) {
+                    max-height: 600px;
+                    overflow: hidden;
+                }
                 @media (max-height: 800px) {
-                    height: 500px;
-                    max-height: 700px;
+                    max-height: 500px;
                     overflow: hidden;
                 }
                 @media (max-height: 450px) and (orientation: landscape) {
-                    height: 300px;
                     max-height: 500px;
                     overflow: hidden;
                 }

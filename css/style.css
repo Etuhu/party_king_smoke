@@ -2868,6 +2868,11 @@ a {
 .technology > .container > .row {
   height: 100%;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .technology > .container {
+    max-width: 100%;
+  }
+}
 @media (max-width: 767px) {
   .technology > .container > .row {
     display: flex;
@@ -2999,16 +3004,20 @@ a {
   transform: translateY(100px);
   opacity: 0;
 }
+@media (max-height: 1024px) {
+  .technology .technology-image .pic .stick {
+    max-height: 600px;
+    overflow: hidden;
+  }
+}
 @media (max-height: 800px) {
   .technology .technology-image .pic .stick {
-    height: 500px;
-    max-height: 700px;
+    max-height: 500px;
     overflow: hidden;
   }
 }
 @media (max-height: 450px) and (orientation: landscape) {
   .technology .technology-image .pic .stick {
-    height: 300px;
     max-height: 500px;
     overflow: hidden;
   }
@@ -4036,6 +4045,27 @@ a {
   background-repeat: no-repeat;
   background-position: center right;
   border-radius: 20px;
+  background-size: 65%;
+}
+@media (max-width: 1399px) {
+  .catalog-list .catalog-list-item--promo .content {
+    background-size: 75%;
+  }
+}
+@media (max-width: 1199px) {
+  .catalog-list .catalog-list-item--promo .content {
+    background-size: 70%;
+  }
+}
+@media (max-width: 767px) {
+  .catalog-list .catalog-list-item--promo .content {
+    background-size: 80%;
+  }
+}
+@media (max-width: 575px) {
+  .catalog-list .catalog-list-item--promo .content {
+    background-size: 70%;
+  }
 }
 .catalog-list .catalog-list-item--promo .content .description {
   width: 50%;

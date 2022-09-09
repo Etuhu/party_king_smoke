@@ -145,6 +145,19 @@
 			background-repeat: no-repeat;
 			background-position: center right;
 			border-radius: 20px;
+			background-size: 65%;
+			@media (max-width: 1399px) {
+				background-size: 75%;
+			}
+			@media (max-width: 1199px) {
+				background-size: 70%;
+			}
+			@media (max-width: 767px) {
+				background-size: 80%;
+			}
+			@media (max-width: 575px) {
+				background-size: 70%;
+			}
 			.description {
 				width: 50%;
 				max-width: 50%;
