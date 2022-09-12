@@ -1,5 +1,6 @@
 .header {
-	background-color: #660606;
+	// background-color: #660606;
+	background-color: $red;
 	color: #f9f9f3;
 	transition: 0.3s ease;
 	.logo-wrapper {
@@ -277,7 +278,7 @@
 }
 
 .header.hidden {
-	transform: translateY(-100%);
+	transform: translateY(-110%);
 	transition: 0.3s ease;
 	&.fixed-visible {
 		transform: translateY(0);

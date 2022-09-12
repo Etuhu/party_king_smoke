@@ -918,7 +918,7 @@ a {
   }
 }
 .header {
-  background-color: #660606;
+  background-color: #E41117;
   color: #f9f9f3;
   transition: 0.3s ease;
 }
@@ -1255,7 +1255,7 @@ a {
 }
 
 .header.hidden {
-  transform: translateY(-100%);
+  transform: translateY(-110%);
   transition: 0.3s ease;
 }
 .header.hidden.fixed-visible {
